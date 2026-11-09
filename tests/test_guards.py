@@ -24,12 +24,28 @@ def test_the_page_is_rewritten_when_no_guard_applies(fossdoc):
 	assert before != after
 
 
-@pytest.mark.parametrize("value", [None, "on", [], {"enabled": False}, {"enabled": "false"}, {"enabled": 0}])
+@pytest.mark.parametrize(
+	"value",
+	[
+		None,
+		"on",
+		[],
+		{"enabled": False},
+		{"enabled": "false"},
+		{"enabled": 0},
+		{"enabled": "disabled"},
+		{"enabled": ""},
+		{"enabled": None},
+		{"enabled": 2},
+	],
+)
 def test_no_config_or_the_kill_switch_is_a_no_op(fossdoc, value):
 	if value is None:
 		fossdoc.local.conf.pop("wiki_seo")
 	elif isinstance(value, dict):
 		fossdoc.local.conf["wiki_seo"] = {**FOSSDOC, **value}
+	elif value == []:
+		fossdoc.local.conf["wiki_seo"] = {key: v for key, v in FOSSDOC.items() if key != "enabled"}
 	else:
 		fossdoc.local.conf["wiki_seo"] = value
 	before, after = run(html_response(fixture("fossdoc_uk.html")))

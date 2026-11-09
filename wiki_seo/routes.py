@@ -18,12 +18,17 @@ class RouteMap:
 		self.routes, self.first = routes, first
 
 	def page(self, path: str):
-		"""(space, slug) of a request path, or None."""
-		return self.routes.get(path.strip("/"))
+		"""(space, slug) of a request path, or None (`/Docs/Page` finds `docs/page`)."""
+		route = path.strip("/")
+		return self.routes.get(route) or self.routes.get(route.lower())
 
 	def languages(self, slug: str, spaces: dict) -> list:
-		"""The languages of the spaces (in the order of `spaces`) that publish `slug` in their sidebar."""
-		return [language for space, language in spaces.items() if f"{space}/{slug}" in self.routes]
+		"""The languages of the spaces (in the order of `spaces`, each once) that publish `slug` in their sidebar."""
+		languages = []
+		for space, language in spaces.items():
+			if language not in languages and self.page(f"{space}/{slug}"):
+				languages.append(language)
+		return languages
 
 
 def build() -> RouteMap:

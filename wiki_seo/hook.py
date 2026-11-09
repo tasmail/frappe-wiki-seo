@@ -8,6 +8,8 @@ raises, and on any error the response stays exactly as it was. Every change is c
 
 import html
 import re
+import time
+from urllib.parse import quote
 
 import frappe
 
@@ -72,8 +74,9 @@ class Config:
 		self.hosts = {normalise_host(host) for host in _list(raw.get("hosts"))}
 		self.base_url = _text(raw.get("base_url")).rstrip("/")
 		spaces = raw.get("spaces") if isinstance(raw.get("spaces"), dict) else {}
+		# the routes of the spaces in lower case: `/Docs/...` is the same space
 		self.spaces = {
-			str(space).strip("/"): language
+			str(space).strip("/").lower(): language
 			for space, language in spaces.items()
 			if isinstance(language, str) and str(space).strip("/")
 		}
@@ -87,16 +90,22 @@ class Config:
 		self.noindex_errors = raw.get("noindex_errors", True) is not False
 
 
-OFF = (False, 0, "0", "false", "off", "no")
+# Only an explicit "on" value enables the hook; anything else (absent, null, "", "disabled", false) is the kill switch.
+ON = ("1", "on", "true", "yes")
+
+
+def enabled(value) -> bool:
+	if isinstance(value, bool):
+		return value
+	if isinstance(value, int):
+		return value == 1
+	return isinstance(value, str) and value.strip().lower() in ON
 
 
 def load_config():
-	"""The configuration of the site, or None when the key is absent, not a dict or `enabled` is false (kill switch)."""
+	"""The configuration of the site, or None when the key is absent, not a dict or not explicitly enabled."""
 	raw = frappe.local.conf.get(CONFIG_KEY)
-	if not isinstance(raw, dict):
-		return None
-	enabled = raw.get("enabled", True)
-	if (enabled.strip().lower() if isinstance(enabled, str) else enabled) in OFF:
+	if not isinstance(raw, dict) or not enabled(raw.get("enabled")):
 		return None
 	return Config(raw)
 
@@ -109,13 +118,33 @@ def normalise_host(host) -> str:
 	return host.split(":", 1)[0].rstrip(".")
 
 
+LOG_INTERVAL = (
+	60  # seconds: a failure that repeats on every request is logged at most once a minute per process
+)
+RETRY_AFTER = (
+	60  # seconds: after the route map failed (no Wiki, a database or cache error) it is not asked again
+)
+_last_log = {}
+_route_map_down_until = 0.0
+
+
+def _log(kind: str, message: str):
+	"""Log an error with its traceback, at most once per LOG_INTERVAL for each kind; the logging itself never raises."""
+	try:
+		now = time.monotonic()
+		if now - _last_log.get(kind, float("-inf")) < LOG_INTERVAL:
+			return
+		_last_log[kind] = now
+		frappe.logger(CONFIG_KEY).error(message, exc_info=True)
+	except Exception:  # noqa: BLE001, S110  a broken logger must not fail the request either
+		pass
+
+
 def after_request(response=None, request=None):
 	try:
 		_after_request(response, request)
 	except Exception:  # noqa: BLE001  every request of the site passes here: a bug must not change a response
-		frappe.logger(CONFIG_KEY).error(
-			"wiki_seo: the hook failed, the response is left as it was", exc_info=True
-		)
+		_log("hook", "wiki_seo: the hook failed, the response is left as it was")
 
 
 def _after_request(response, request):
@@ -137,14 +166,36 @@ def _after_request(response, request):
 	if 300 <= response.status_code < 400:
 		return
 
-	add_robots = header_rules(config, path, response)
-	data = body_rules(config, path, response, request.args)
-
-	if add_robots:
+	# the header rules first and on their own: a failure of the body rules (the route map, a rule) never costs the header
+	if header_rules(config, path, response):
 		response.headers.add(ROBOTS_HEADER, ROBOTS_VALUE)
+	try:
+		data = body_rules(config, path, response, request.args)
+	except Exception:  # noqa: BLE001  the body stays as it was
+		_log("body", "wiki_seo: a body rule failed, the body is left as it was")
+		return
 	if data is not None:
 		response.set_data(data)
 		response.headers[MARK_HEADER] = "1"
+
+
+def in_spaces(config: Config, path: str) -> bool:
+	"""Whether the path is under one of the configured spaces (the case ignored): only then is the route map asked."""
+	route = path.strip("/").lower()
+	return any(route.startswith(space + "/") for space in config.spaces)
+
+
+def route_map_or_none():
+	"""The route map, or None while it fails (logged at most once a minute, not asked again for RETRY_AFTER s)."""
+	global _route_map_down_until
+	if time.monotonic() < _route_map_down_until:
+		return None
+	try:
+		return routes.get()
+	except Exception:  # noqa: BLE001  no Wiki, a database or a cache error: only the body rules are skipped
+		_route_map_down_until = time.monotonic() + RETRY_AFTER
+		_log("routes", "wiki_seo: the route map failed, the body rules are skipped")
+		return None
 
 
 def header_rules(config: Config, path: str, response) -> bool:
@@ -167,19 +218,22 @@ def body_rules(config: Config, path: str, response, args=None):
 		return None
 	if response.mimetype_params.get("charset", "utf-8").lower() != "utf-8":
 		return None
-	if not config.spaces:
+	if not in_spaces(config, path):
 		return None
-	route_map = routes.get()
+	route_map = route_map_or_none()
+	if route_map is None:
+		return None
 	page = route_map.page(path)
-	if page is None or page[0] not in config.spaces:
+	if page is None or page[0].lower() not in config.spaces:
 		return None
 	space, slug = page
+	space_key = space.lower()
 	data = response.get_data()
 	head_end = HEAD_END.search(data)
 	if head_end is None:
 		return None
 	head, rest = data[: head_end.start()], data[head_end.start() :]
-	language = config.spaces[space]
+	language = config.spaces[space_key]
 	head = set_html_lang(head, language)
 	head = set_meta_language(head, language)
 	head = add_hreflang(head, config, route_map, slug)
@@ -220,18 +274,24 @@ def set_meta_language(head: bytes, language: str) -> bytes:
 	return head[: match.start()] + tag + head[match.end() :]
 
 
+def _url(space: str, slug: str) -> str:
+	"""`/<space>/<slug>` with the slug percent-quoted (the space route keeps its slashes)."""
+	return "/" + quote(space, safe="/-._~") + "/" + quote(slug, safe="-._~")
+
+
 def hreflang_links(config: Config, route_map, slug: str) -> bytes:
-	"""One link per space that publishes the slug, then `x-default`; nothing for a slug of one space."""
-	languages = route_map.languages(slug, config.spaces)
+	"""One link per language that publishes the slug, then `x-default`; nothing for a slug of one language."""
+	spaces = {}  # language -> the first space of that language that publishes the slug
+	for space, language in config.spaces.items():
+		if language not in spaces and route_map.page(f"{space}/{slug}"):
+			spaces[language] = route_map.page(f"{space}/{slug}")[0]
+	languages = list(spaces)
 	if len(languages) < 2:
 		return b""
-	spaces = {}
-	for space, language in config.spaces.items():
-		spaces.setdefault(language, space)
 	default = config.x_default if config.x_default in languages else languages[0]
 
 	def link(code, language):
-		href = f"{config.base_url}/{spaces[language]}/{slug}"
+		href = config.base_url + _url(spaces[language], slug)
 		return b'<link rel="alternate" hreflang="%s" href="%s" data-fd-hreflang>' % (_attr(code), _attr(href))
 
 	return b"".join(link(language, language) for language in languages) + link("x-default", default)
@@ -277,7 +337,7 @@ def set_logo_href(rest: bytes, first_slug: str, space: str) -> bytes:
 	match = BRAND_ANCHOR.search(rest)
 	if match is None:
 		return rest
-	target = _attr(f"/{space}/{first_slug}")
+	target = _attr(_url(space, first_slug))
 	tag = match.group(0)
 	href = HREF_ATTR.search(tag)
 	if href and href.group(1).strip(b"\"'").strip() == target:

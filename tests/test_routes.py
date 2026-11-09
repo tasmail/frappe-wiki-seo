@@ -65,6 +65,42 @@ def test_a_cache_failure_leaves_the_page_untouched(fossdoc):
 	assert response.get_data() == body and len(fossdoc.log.lines) == 1
 
 
+def test_a_failing_route_map_skips_only_the_body_rules_and_is_not_asked_again(fossdoc, monkeypatch):
+	calls = []
+
+	def broken():
+		calls.append(1)
+		raise RuntimeError("no Wiki Space table")
+
+	monkeypatch.setattr(routes, "get", broken)
+	fossdoc.local.conf["wiki_seo"]["noindex_paths"] = ["login", "docs"]
+	body = (FIXTURES / "fossdoc_uk.html").read_bytes()
+	for _ in range(10):
+		page = html_response(body)
+		hook.after_request(response=page, request=make_request("/docs/howto-change-localization"))
+		assert page.get_data() == body and "X-Wiki-Seo" not in page.headers
+		assert page.headers.getlist("X-Robots-Tag") == ["noindex, nofollow"]
+		login = html_response()
+		hook.after_request(response=login, request=make_request("/login"))
+		assert login.headers.getlist("X-Robots-Tag") == ["noindex, nofollow"]
+	assert len(calls) == 1  # retried only after RETRY_AFTER seconds
+	assert fossdoc.log.lines == ["wiki_seo: the route map failed, the body rules are skipped"]
+	clock = [hook.time.monotonic() + hook.RETRY_AFTER + 1]
+	monkeypatch.setattr(hook.time, "monotonic", lambda: clock[0])
+	hook.after_request(response=html_response(body), request=make_request("/docs/howto-change-localization"))
+	assert len(calls) == 2
+
+
+def test_the_route_map_is_asked_only_for_paths_of_the_spaces(fossdoc, monkeypatch):
+	calls = []
+	monkeypatch.setattr(routes, "get", lambda: calls.append(1) or routes.RouteMap({}, {}))
+	for path in ("/", "/login", "/product", "/docs", "/rus/docs/x", "/docsx/y"):
+		hook.after_request(response=html_response(), request=make_request(path))
+	assert calls == []
+	hook.after_request(response=html_response(), request=make_request("/RU/docs/x"))
+	assert calls == [1]
+
+
 def test_languages_follow_the_order_of_the_config(frappe_stub):
 	frappe_stub.wiki.add_space("en/docs", ["a"])
 	frappe_stub.wiki.add_space("docs", ["a"])

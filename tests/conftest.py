@@ -99,6 +99,7 @@ def _make_frappe():
 FRAPPE = _make_frappe()
 
 FOSSDOC = {
+	"enabled": True,
 	"hosts": ["www.fossdoc.com", "fossdoc.com", "prod-internal.wiki.example.org"],
 	"base_url": "https://www.fossdoc.com",
 	"spaces": {"docs": "uk", "ru/docs": "ru", "en/docs": "en"},
@@ -116,6 +117,10 @@ def frappe_stub():
 	FRAPPE.cache = FakeCache()
 	FRAPPE.wiki = Wiki()
 	FRAPPE.log.lines.clear()
+	if "wiki_seo.hook" in sys.modules:  # the throttles of the logging and of a failed route map
+		hook = sys.modules["wiki_seo.hook"]
+		hook._last_log.clear()
+		hook._route_map_down_until = 0.0
 	return FRAPPE
 
 

@@ -262,9 +262,83 @@ def test_an_error_inside_a_rule_leaves_the_response_byte_identical(fossdoc, monk
 		raise ValueError("boom")
 
 	monkeypatch.setattr(hook, "set_logo_href", broken)
-	fossdoc.local.conf["wiki_seo"]["noindex_paths"] = ["docs"]  # the header rule would fire too
 	response = html_response(fixture("fossdoc_uk.html"))
 	before = (response.status_code, list(response.headers.items()), response.get_data())
 	hook.after_request(response=response, request=make_request(f"/docs/{SLUG}"))
 	assert (response.status_code, list(response.headers.items()), response.get_data()) == before
+	assert fossdoc.log.lines == ["wiki_seo: a body rule failed, the body is left as it was"]
+
+
+def test_an_error_inside_a_body_rule_keeps_the_header_rule(fossdoc, monkeypatch):
+	monkeypatch.setattr(hook, "add_title_suffix", lambda *args: 1 / 0)
+	fossdoc.local.conf["wiki_seo"]["noindex_paths"] = ["docs"]
+	body = fixture("fossdoc_uk.html")
+	response = html_response(body)
+	hook.after_request(response=response, request=make_request(f"/docs/{SLUG}"))
+	assert response.headers.getlist("X-Robots-Tag") == ["noindex, nofollow"]
+	assert response.get_data() == body and "X-Wiki-Seo" not in response.headers
+
+
+def test_an_error_outside_the_body_rules_leaves_the_response_untouched(fossdoc, monkeypatch):
+	monkeypatch.setattr(hook, "header_rules", lambda *args: 1 / 0)
+	response = html_response(fixture("fossdoc_uk.html"))
+	before = (list(response.headers.items()), response.get_data())
+	hook.after_request(response=response, request=make_request(f"/docs/{SLUG}"))
+	assert (list(response.headers.items()), response.get_data()) == before
 	assert fossdoc.log.lines == ["wiki_seo: the hook failed, the response is left as it was"]
+
+
+def test_a_broken_logger_does_not_leave_the_hook(fossdoc, monkeypatch):
+	monkeypatch.setattr(hook, "header_rules", lambda *args: 1 / 0)
+	monkeypatch.setattr(fossdoc, "logger", lambda name=None: 1 / 0)
+	hook.after_request(response=html_response(), request=make_request("/x"))  # does not raise
+
+
+def test_a_repeated_failure_is_logged_once_a_minute(fossdoc, monkeypatch):
+	monkeypatch.setattr(hook, "set_logo_href", lambda *args: 1 / 0)
+	for _ in range(5):
+		hook.after_request(
+			response=html_response(fixture("fossdoc_uk.html")), request=make_request(f"/docs/{SLUG}")
+		)
+	assert len(fossdoc.log.lines) == 1
+	clock = [hook.time.monotonic() + 61]
+	monkeypatch.setattr(hook.time, "monotonic", lambda: clock[0])
+	hook.after_request(
+		response=html_response(fixture("fossdoc_uk.html")), request=make_request(f"/docs/{SLUG}")
+	)
+	assert len(fossdoc.log.lines) == 2
+
+
+def test_a_space_route_is_matched_without_the_case(fossdoc):
+	response = rewrite(fixture("fossdoc_uk.html"), f"/Docs/{SLUG.upper()}")
+	assert response.headers.get("X-Wiki-Seo") == "1"
+	fossdoc.local.conf["wiki_seo"]["spaces"] = {"DOCS": "uk", "ru/docs": "ru"}
+	assert rewrite(fixture("fossdoc_uk.html"), f"/docs/{SLUG}").headers.get("X-Wiki-Seo") == "1"
+
+
+def test_slugs_are_percent_quoted_and_escaped_in_urls(frappe_stub):
+	frappe_stub.local.conf["wiki_seo"] = dict(FOSSDOC)
+	frappe_stub.wiki.add_space("docs", ['a"b<c>д', "x"])
+	frappe_stub.wiki.add_space("ru/docs", ['a"b<c>д'])
+	data = rewrite(
+		b'<html><head></head><body><a class="navbar-brand" href="/">L</a></body></html>', "/docs/x"
+	).get_data()
+	assert b'href="/docs/a%22b%3Cc%3E%D0%B4"' in data  # the logo: the first page of the sidebar
+	text = head(rewrite(b"<html><head></head></html>", "/docs/" + 'a"b<c>д').get_data())
+	assert 'hreflang="ru" href="https://www.fossdoc.com/ru/docs/a%22b%3Cc%3E%D0%B4"' in text
+
+
+def test_two_spaces_of_one_language_give_one_link_of_it(frappe_stub):
+	frappe_stub.local.conf["wiki_seo"] = {
+		**FOSSDOC,
+		"spaces": {"docs": "uk", "old/docs": "uk", "en/docs": "en"},
+	}
+	frappe_stub.wiki.add_space("docs", ["only-old"])
+	frappe_stub.wiki.add_space("old/docs", ["p", "only-old"])
+	frappe_stub.wiki.add_space("en/docs", ["p"])
+	assert hreflang(rewrite(b"<html><head></head></html>", "/en/docs/p").get_data()) == [
+		("uk", f"{BASE}/old/docs/p"),
+		("en", f"{BASE}/en/docs/p"),
+		("x-default", f"{BASE}/old/docs/p"),
+	]
+	assert hreflang(rewrite(b"<html><head></head></html>", "/docs/only-old").get_data()) == []

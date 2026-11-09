@@ -56,15 +56,20 @@ def test_malformed_values_are_ignored_and_unknown_keys_too():
 	assert hook.Config({"noindex_errors": False}).noindex_errors is False
 
 
-@pytest.mark.parametrize("enabled", [True, 1, "on", "true", None])
-def test_anything_but_an_off_value_keeps_it_on(frappe_stub, enabled):
+@pytest.mark.parametrize("enabled", [True, 1, "on", "true", " Yes ", "1"])
+def test_only_an_explicit_on_value_enables_it(frappe_stub, enabled):
 	frappe_stub.local.conf["wiki_seo"] = {"enabled": enabled}
 	assert hook.load_config() is not None
 
 
-@pytest.mark.parametrize("enabled", [False, 0, "0", "false", "Off", " no "])
-def test_an_off_value_is_the_kill_switch(frappe_stub, enabled):
+@pytest.mark.parametrize("enabled", [False, 0, 2, "0", "false", "Off", " no ", "disabled", "", None, [], {}])
+def test_any_other_value_is_the_kill_switch(frappe_stub, enabled):
 	frappe_stub.local.conf["wiki_seo"] = {"enabled": enabled}
+	assert hook.load_config() is None
+
+
+def test_an_absent_enabled_key_is_off(frappe_stub):
+	frappe_stub.local.conf["wiki_seo"] = {"hosts": ["www.fossdoc.com"]}
 	assert hook.load_config() is None
 
 
