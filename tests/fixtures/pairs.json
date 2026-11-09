@@ -1,0 +1,5331 @@
+{
+ "source": "tasmail/erpnext-infra 441b890 (main): load_pages() of every space and the PAIRS of language_js(FOSSDOC_LANGUAGES) and language_js(ERPFOSS_LANGUAGES) in press/fossdoc_wiki.py",
+ "fossdoc": {
+  "spaces": [
+   {
+    "route": "docs",
+    "language": "uk",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-2",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-3",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-4",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-5",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-6",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-7",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-8",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "create-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "client-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "arm",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "folders-tree",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "users-mail-root",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "common-address-books",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "shared-contacts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "attached-files",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "add-file-link",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-files-blocking",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-mark",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docs-execution-status",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "svjazannye-dokumenty",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "perepiska-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhod-ishod",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "print-resolution",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "automatic-transfer-documents-to-subfolders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "resolution",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "resolution-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "order-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "show-vice-performers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "servicedoc",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "memorandum",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "civils",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "civils-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control-dep-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "projects",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "project-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "approval-with-departments-heads",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "assistant-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "report-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "qrcode",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "doc-journal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "podpis-documenta-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-chat",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reminder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "statistic",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "journal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "modhistory",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "audit",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "orgstructure",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-extended-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "departments-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-management",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "users-groups",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-set-access-rights",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "access-rights-levels",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-templates",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "department-templates",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "users-sessions",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "last-login-time",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "blocked-docs",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "server-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "password-policy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "two-factor-auth",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "system-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "common-card-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "default-values-library",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "file-size-restrictions",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-positions-dictionary",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "text-snippets",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "physical-persons",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "citizen-requests",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "doctypes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "project-wizard",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docs-numbers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "regnum-reserv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "numerators-fosslook",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "archive",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "storage",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "domain",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "web-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "web-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "email-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-create-email-account",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reminder-email",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-setting-the-order-of-folders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docrouts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "preparation-of-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "route-template-points",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "advanced-rout-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control-routing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "test-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "workflows-dictionary",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "routing-notifier",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-template-tools",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-personal-templates-policy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-visibility",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-display-options",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-acting-users",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-fill-task-content",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-manual-tasks-processing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-task-coloring",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-notifs",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-term-reminders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-stop-on-negative",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-delete-by-group",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "documents-libraries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "modules",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "external-modules",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-counterparty",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-mail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-import-ad",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-nomenklature",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-projects",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-projects-to-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-qrcodes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-recurring-tasks",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "documentlibrary",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "calcfields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "install-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howtoinstall",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "links",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "installtroubleshooting",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "choosing-database",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sql-economy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-twolan",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-internet",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "connect-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "configuring-webclient-on-iis-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "db-transfer-wizard",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "filestream",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "server-upgrade",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "license-upgrade",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-clickonce",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-mysql-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "integrations-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ecp",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "providers-ecp",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "library-edms-digitalsign",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "iit-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "iit-client-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "bitis-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "internetmail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossmail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "abbyy-integration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossbap",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ptah",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vchasno",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "mobileid",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev-npa",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "webportal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "portal-setup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ecity-admin-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ecity-user-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "podkluchenie-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "accounts-number",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "obuchenie-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "edit-date-index",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhodyashiye",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reference-dictionaries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-struktura",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-change-localization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-client-configuration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-doc-copy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-library",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-templates",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-documents-search",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-email-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-enabled-disabled-delete-routes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-export-import",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fast-insertion-of-text",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-field-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-field-types-complex",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fields-calculated-value",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fields-default-value",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-enabling-of-the-statistics-and-history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-review-of-the-statistics-and-history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-starting-the-statistics",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-create-a-document-library",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-create-a-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-deleting-doctypes-and-libraries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-manage-folders-to-store-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-working-with-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-preparation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-print",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-functions",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-preparation-of-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-email-account",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization-tree-brances",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization-user-management",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-customization-of-the-type-of-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-view-filter",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-virtual-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-provide-access-to-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents-auto",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-co-workers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-route-control-points",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-import-files",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-inner-accounts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-link-copy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-periodic-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-publication-of-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-setting-eds",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-ssl-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-staff-departments",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-users-csv-import",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-work-with-directories",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-configuring-access-to-a-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-creating-a-basic-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-fields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-test-the-solution",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-use-of-the-mechanism-of-inherited-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-delegation-of-powers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-period-of-execution-of-orders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-administrator",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-restrict-access-to-individual-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-search-the-entire-database",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-subdivision",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-standard-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vybor-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "dokumentooborot-dlja-biznesa",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "klassifikacija-informacionnyh-sistem",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "tendencii-razvitija-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-implementation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial1",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial2",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial3",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "golden-gate-testimonial",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-class-schedule",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-collaboration-folders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-documents-assembling",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-hr-automation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-information-system-implementation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-microsoft-office-documents-merging-vs-temlates-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-use-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "publish-demo-release",
+      "published": 0,
+      "sidebar": 1
+     }
+    ]
+   },
+   {
+    "route": "ru/docs",
+    "language": "ru",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-2",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-3",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-4",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-5",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-6",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-7",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gettingstarted-8",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "create-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "client-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "arm",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "folders-tree",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "users-mail-root",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "common-address-books",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "shared-contacts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "attached-files",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "add-file-link",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-files-blocking",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-mark",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docs-execution-status",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "svjazannye-dokumenty",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "perepiska-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhod-ishod",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "print-resolution",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "automatic-transfer-documents-to-subfolders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "resolution",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "resolution-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "order-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "show-vice-performers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "servicedoc",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "memorandum",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "civils",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "civils-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control-dep-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "projects",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "project-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "approval-with-departments-heads",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "assistant-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "report-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "qrcode",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "doc-journal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "podpis-documenta-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-chat",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reminder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "statistic",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "journal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "modhistory",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "audit",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "orgstructure",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "administrator-extended-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "departments-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-management",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "users-groups",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-set-access-rights",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "access-rights-levels",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-templates",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "department-templates",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "users-sessions",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "last-login-time",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "blocked-docs",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "server-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "password-policy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "two-factor-auth",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "system-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "common-card-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "default-values-library",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "file-size-restrictions",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "user-positions-dictionary",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "text-snippets",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "physical-persons",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "citizen-requests",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "doctypes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "project-wizard",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docs-numbers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "regnum-reserv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "document-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "numerators-fosslook",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "archive",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "storage",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "domain",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "web-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "web-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "email-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-create-email-account",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reminder-email",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "import-polzovatelej-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-develop",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-setting-the-order-of-folders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "docrouts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "preparation-of-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "route-template-points",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "advanced-rout-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "control-routing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "test-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "workflows-dictionary",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "routing-notifier",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-template-tools",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-personal-templates-policy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-visibility",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-display-options",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-acting-users",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-fill-task-content",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-manual-tasks-processing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-task-coloring",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-notifs",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-term-reminders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-stop-on-negative",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-workflows-delete-by-group",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "documents-libraries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "modules",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "external-modules",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-counterparty",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-mail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-import-ad",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-nomenklature",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-projects",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-projects-to-registration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-edms-qrcodes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "library-recurring-tasks",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "documentlibrary",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "calcfields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "install-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howtoinstall",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "links",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "installtroubleshooting",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "choosing-database",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sql-economy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-twolan",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-internet",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "connect-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "configuring-webclient-on-iis-server",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "how-to-configure-fossdoc-with-mysql-on-linux",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "db-transfer-wizard",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "filestream",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "server-upgrade",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "license-upgrade",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fdmp-backup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-mysql-backup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-mysql-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "integrations-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ecp",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "providers-ecp",
+      "published": 1,
+      "sidebar": 0
+     },
+     {
+      "slug": "library-edms-digitalsign",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "iit-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "iit-client-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "bitis-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "internetmail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossmail",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "abbyy-integration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossbap",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "ptah",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vchasno",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "mobileid",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "sev-npa",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "webportal",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "portal-setup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "podkluchenie-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "accounts-number",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "obuchenie-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "edit-date-index",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhodyashiye",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reference-dictionaries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-struktura",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-change-localization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-client-configuration",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-doc-copy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-library",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-templates",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-documents-search",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-email-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-enabled-disabled-delete-routes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-export-import",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fast-insertion-of-text",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-field-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-field-types-complex",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fields-calculated-value",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fields-default-value",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-enabling-of-the-statistics-and-history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-review-of-the-statistics-and-history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-history-and-statistics-of-the-document-starting-the-statistics",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-create-a-document-library",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-create-a-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-deleting-doctypes-and-libraries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-manage-folders-to-store-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type-working-with-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-preparation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-print",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-functions",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-preparation-of-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-email-account",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization-tree-brances",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization-user-management",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-customization-of-the-type-of-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-view-filter",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customize-views-of-folders-and-documents-virtual-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-provide-access-to-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents-auto",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-co-workers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-route-control-points",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-import-files",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-inner-accounts",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-link-copy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-periodic-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-publication-of-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-setting-eds",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-ssl-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-staff-departments",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-users-csv-import",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-work-with-directories",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-configuring-access-to-a-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-creating-a-basic-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-fields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-test-the-solution",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-use-of-the-mechanism-of-inherited-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-delegation-of-powers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-login-as-admin",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-period-of-execution-of-orders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-administrator",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-restrict-access-to-individual-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-search-the-entire-database",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-subdivision",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-standard-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vybor-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "dokumentooborot-dlja-biznesa",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "klassifikacija-informacionnyh-sistem",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "tendencii-razvitija-sed",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "fossdoc-implementation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial1",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial2",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "testimonial3",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "golden-gate-testimonial",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-class-schedule",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-collaboration-folders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-documents-assembling",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-hr-automation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-information-system-implementation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-microsoft-office-documents-merging-vs-temlates-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-use-fosslook",
+      "published": 1,
+      "sidebar": 1
+     }
+    ]
+   },
+   {
+    "route": "en/docs",
+    "language": "en",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-access-levels",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-active-directory",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-adminprogramm",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-business-calendar",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-calculated-fields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-change-localization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-client-application",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-client-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-preparation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-a-template-for-printing-template-print",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-configuring-access-to-a-folder",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-creating-a-basic-document-type",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-fields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-document-functions",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-preparation-of-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-preparation-of-the-route-pattern",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-test-the-route",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-test-the-solution",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-use-of-the-mechanism-of-inherited-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-business-application-use-of-the-mechanism-to-add-fields",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-digital-signature",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-email-account",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-reports-using-groupings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-create-structure-organization",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-customizing-view-settings-for-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-delegation-of-powers",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-history",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-libraries",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-statistics",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-document-templates",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-documents-publication",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-email-server-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-enabled-disabled-delete-routes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-export-import",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-external-modules",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fdmp-backup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-field-types",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-fields-default-value",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-install",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-last-login-time",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-levels-of-access",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-levels-of-access-options",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-link-related-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-log-in-system",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-manage-groups-of-users",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-mysql-backup",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-mysql-fosslook",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-password-policy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-period-of-execution-of-orders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-periodic-tasks",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-delegating-mailbox-unit",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-administrator",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-employee",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-provide-access-to-folders-and-documents-provide-access-to-folders-and-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-related-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-removing-libraries-and-doctypes",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-restrict-access-to-individual-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-restrict-access-to-individual-documents-access-to-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-restrict-access-to-individual-documents-restricting-access-to-the-files-attached",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-routing-document",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-agreement",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-auto",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-familiarize",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-manual",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-subdivision",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-orders-work",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-route-control-points",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-route-parallel",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-route-serial",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-share-documents-routing-documents",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-text-snippets",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-use-document-search",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-virtual-folders",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-student-group-timetable",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "howto-what-is-electronic-document-management-system",
+      "published": 1,
+      "sidebar": 1
+     }
+    ]
+   }
+  ],
+  "pairs": {
+   "abbyy-integration": [
+    "uk",
+    "ru"
+   ],
+   "access-rights-levels": [
+    "uk",
+    "ru"
+   ],
+   "accounts-number": [
+    "uk",
+    "ru"
+   ],
+   "add-file-link": [
+    "uk",
+    "ru"
+   ],
+   "administrator-documentation": [
+    "uk",
+    "ru"
+   ],
+   "administrator-extended-documentation": [
+    "uk",
+    "ru"
+   ],
+   "administrator-manual": [
+    "uk",
+    "ru"
+   ],
+   "advanced-rout-settings": [
+    "uk",
+    "ru"
+   ],
+   "approval-with-departments-heads": [
+    "uk",
+    "ru"
+   ],
+   "archive": [
+    "uk",
+    "ru"
+   ],
+   "arm": [
+    "uk",
+    "ru"
+   ],
+   "assistant-work": [
+    "uk",
+    "ru"
+   ],
+   "attached-files": [
+    "uk",
+    "ru"
+   ],
+   "audit": [
+    "uk",
+    "ru"
+   ],
+   "automatic-transfer-documents-to-subfolders": [
+    "uk",
+    "ru"
+   ],
+   "bitis-manual": [
+    "uk",
+    "ru"
+   ],
+   "calcfields": [
+    "uk",
+    "ru"
+   ],
+   "choosing-database": [
+    "uk",
+    "ru"
+   ],
+   "civils-work": [
+    "uk",
+    "ru"
+   ],
+   "client-documentation": [
+    "uk",
+    "ru"
+   ],
+   "common-card-settings": [
+    "uk",
+    "ru"
+   ],
+   "configuring-webclient-on-iis-server": [
+    "uk",
+    "ru"
+   ],
+   "connect-server-settings": [
+    "uk",
+    "ru"
+   ],
+   "control": [
+    "uk",
+    "ru"
+   ],
+   "control-dep-work": [
+    "uk",
+    "ru"
+   ],
+   "control-routing": [
+    "uk",
+    "ru"
+   ],
+   "create-document-type": [
+    "uk",
+    "ru"
+   ],
+   "db-transfer-wizard": [
+    "uk",
+    "ru"
+   ],
+   "departments-manual": [
+    "uk",
+    "ru"
+   ],
+   "doc-journal": [
+    "uk",
+    "ru"
+   ],
+   "docrouts": [
+    "uk",
+    "ru"
+   ],
+   "docs-execution-status": [
+    "uk",
+    "ru"
+   ],
+   "docs-numbers": [
+    "uk",
+    "ru"
+   ],
+   "docs-overview": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "doctypes": [
+    "uk",
+    "ru"
+   ],
+   "document-chat": [
+    "uk",
+    "ru"
+   ],
+   "document-files-blocking": [
+    "uk",
+    "ru"
+   ],
+   "document-mark": [
+    "uk",
+    "ru"
+   ],
+   "document-registration": [
+    "uk",
+    "ru"
+   ],
+   "documentlibrary": [
+    "uk",
+    "ru"
+   ],
+   "documents-libraries": [
+    "uk",
+    "ru"
+   ],
+   "dokumentooborot-dlja-biznesa": [
+    "uk",
+    "ru"
+   ],
+   "domain": [
+    "uk",
+    "ru"
+   ],
+   "ecp": [
+    "uk",
+    "ru"
+   ],
+   "edit-date-index": [
+    "uk",
+    "ru"
+   ],
+   "email-server-settings": [
+    "uk",
+    "ru"
+   ],
+   "external-modules": [
+    "uk",
+    "ru"
+   ],
+   "file-size-restrictions": [
+    "uk",
+    "ru"
+   ],
+   "folders-tree": [
+    "uk",
+    "ru"
+   ],
+   "fossbap": [
+    "uk",
+    "ru"
+   ],
+   "fossdoc-implementation": [
+    "uk",
+    "ru"
+   ],
+   "fossdoc-internet": [
+    "uk",
+    "ru"
+   ],
+   "fossdoc-twolan": [
+    "uk",
+    "ru"
+   ],
+   "fossdoc-work": [
+    "uk",
+    "ru"
+   ],
+   "fossmail": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-2": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-3": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-4": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-5": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-6": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-7": [
+    "uk",
+    "ru"
+   ],
+   "gettingstarted-8": [
+    "uk",
+    "ru"
+   ],
+   "golden-gate-testimonial": [
+    "uk",
+    "ru"
+   ],
+   "history": [
+    "uk",
+    "ru"
+   ],
+   "how-to-create-email-account": [
+    "uk",
+    "ru"
+   ],
+   "how-to-set-access-rights": [
+    "uk",
+    "ru"
+   ],
+   "howto-admincustomize-views-of-folders-and-documents": [
+    "uk",
+    "ru"
+   ],
+   "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-document": [
+    "uk",
+    "ru"
+   ],
+   "howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-folder": [
+    "uk",
+    "ru"
+   ],
+   "howto-change-localization": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-class-schedule": [
+    "uk",
+    "ru"
+   ],
+   "howto-client-configuration": [
+    "uk",
+    "ru"
+   ],
+   "howto-collaboration-folders": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-document-type": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-a-document-type-create-a-document-library": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-document-type-create-a-document-type": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-document-type-deleting-doctypes-and-libraries": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-document-type-manage-folders-to-store-documents": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-document-type-working-with-documents": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-a-template-for-printing": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-a-template-for-printing-template-preparation": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-a-template-for-printing-template-print": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-configuring-access-to-a-folder": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-creating-a-basic-document-type": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-document-fields": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-document-functions": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-preparation-of-the-route": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-test-the-solution": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-business-application-use-of-the-mechanism-of-inherited-types": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-email-account": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-structure-organization": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-create-structure-organization-tree-brances": [
+    "uk",
+    "ru"
+   ],
+   "howto-create-structure-organization-user-management": [
+    "uk",
+    "ru"
+   ],
+   "howto-customize-views-of-folders-and-documents-customization-of-the-type-of-folder": [
+    "uk",
+    "ru"
+   ],
+   "howto-customize-views-of-folders-and-documents-view-filter": [
+    "uk",
+    "ru"
+   ],
+   "howto-customize-views-of-folders-and-documents-virtual-folder": [
+    "uk",
+    "ru"
+   ],
+   "howto-delegation-of-powers": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-doc-copy": [
+    "uk",
+    "ru"
+   ],
+   "howto-document": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-document-library": [
+    "uk",
+    "ru"
+   ],
+   "howto-document-templates": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-document-type": [
+    "uk",
+    "ru"
+   ],
+   "howto-documents-assembling": [
+    "uk",
+    "ru"
+   ],
+   "howto-documents-search": [
+    "uk",
+    "ru"
+   ],
+   "howto-email-server-settings": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-enabled-disabled-delete-routes": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-export-import": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-fast-insertion-of-text": [
+    "uk",
+    "ru"
+   ],
+   "howto-fdmp-backup": [
+    "ru",
+    "en"
+   ],
+   "howto-field-types": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-field-types-complex": [
+    "uk",
+    "ru"
+   ],
+   "howto-fields-calculated-value": [
+    "uk",
+    "ru"
+   ],
+   "howto-fields-default-value": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-history-and-statistics-of-the-document": [
+    "uk",
+    "ru"
+   ],
+   "howto-history-and-statistics-of-the-document-enabling-of-the-statistics-and-history": [
+    "uk",
+    "ru"
+   ],
+   "howto-history-and-statistics-of-the-document-review-of-the-statistics-and-history": [
+    "uk",
+    "ru"
+   ],
+   "howto-history-and-statistics-of-the-document-starting-the-statistics": [
+    "uk",
+    "ru"
+   ],
+   "howto-hr-automation": [
+    "uk",
+    "ru"
+   ],
+   "howto-import-files": [
+    "uk",
+    "ru"
+   ],
+   "howto-information-system-implementation": [
+    "uk",
+    "ru"
+   ],
+   "howto-inner-accounts": [
+    "uk",
+    "ru"
+   ],
+   "howto-link-copy": [
+    "uk",
+    "ru"
+   ],
+   "howto-microsoft-office-documents-merging-vs-temlates-fosslook": [
+    "uk",
+    "ru"
+   ],
+   "howto-mysql-backup": [
+    "ru",
+    "en"
+   ],
+   "howto-mysql-fosslook": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-period-of-execution-of-orders": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-periodic-tasks": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-administrator": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-provide-access-to-folders-and-documents-provide-access-to-folders-and-documents": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-publication-of-documents": [
+    "uk",
+    "ru"
+   ],
+   "howto-related-documents": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-related-documents-auto": [
+    "uk",
+    "ru"
+   ],
+   "howto-related-documents-manual": [
+    "uk",
+    "ru"
+   ],
+   "howto-restrict-access-to-individual-documents": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-search-the-entire-database": [
+    "uk",
+    "ru"
+   ],
+   "howto-setting-eds": [
+    "uk",
+    "ru"
+   ],
+   "howto-setting-the-order-of-folders": [
+    "uk",
+    "ru"
+   ],
+   "howto-share-documents-orders-co-workers": [
+    "uk",
+    "ru"
+   ],
+   "howto-share-documents-orders-subdivision": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-share-documents-route-control-points": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "howto-ssl-server-settings": [
+    "uk",
+    "ru"
+   ],
+   "howto-staff-departments": [
+    "uk",
+    "ru"
+   ],
+   "howto-standard-document": [
+    "uk",
+    "ru"
+   ],
+   "howto-struktura": [
+    "uk",
+    "ru"
+   ],
+   "howto-use-fosslook": [
+    "uk",
+    "ru"
+   ],
+   "howto-users-csv-import": [
+    "uk",
+    "ru"
+   ],
+   "howto-work-with-directories": [
+    "uk",
+    "ru"
+   ],
+   "howtoinstall": [
+    "uk",
+    "ru"
+   ],
+   "iit-client-manual": [
+    "uk",
+    "ru"
+   ],
+   "iit-manual": [
+    "uk",
+    "ru"
+   ],
+   "install-overview": [
+    "uk",
+    "ru"
+   ],
+   "installtroubleshooting": [
+    "uk",
+    "ru"
+   ],
+   "integrations-overview": [
+    "uk",
+    "ru"
+   ],
+   "internetmail": [
+    "uk",
+    "ru"
+   ],
+   "journal": [
+    "uk",
+    "ru"
+   ],
+   "klassifikacija-informacionnyh-sistem": [
+    "uk",
+    "ru"
+   ],
+   "last-login-time": [
+    "uk",
+    "ru"
+   ],
+   "library-counterparty": [
+    "uk",
+    "ru"
+   ],
+   "library-edms": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-digitalsign": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-import-ad": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-nomenklature": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-projects": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-projects-to-registration": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-qrcodes": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-registration": [
+    "uk",
+    "ru"
+   ],
+   "library-edms-tasks": [
+    "uk",
+    "ru"
+   ],
+   "library-mail": [
+    "uk",
+    "ru"
+   ],
+   "library-server": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-acting-users": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-delete-by-group": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-display-options": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-fill-task-content": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-manual-tasks-processing": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-notifs": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-personal-templates-policy": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-stop-on-negative": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-task-coloring": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-template-tools": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-term-reminders": [
+    "uk",
+    "ru"
+   ],
+   "library-workflows-visibility": [
+    "uk",
+    "ru"
+   ],
+   "license-upgrade": [
+    "uk",
+    "ru"
+   ],
+   "links": [
+    "uk",
+    "ru"
+   ],
+   "memorandum": [
+    "uk",
+    "ru"
+   ],
+   "mobileid": [
+    "uk",
+    "ru"
+   ],
+   "modhistory": [
+    "uk",
+    "ru"
+   ],
+   "modules": [
+    "uk",
+    "ru"
+   ],
+   "obuchenie-sed": [
+    "uk",
+    "ru"
+   ],
+   "order-types": [
+    "uk",
+    "ru"
+   ],
+   "orgstructure": [
+    "uk",
+    "ru"
+   ],
+   "password-policy": [
+    "uk",
+    "ru"
+   ],
+   "perepiska-sed": [
+    "uk",
+    "ru"
+   ],
+   "podkluchenie-sed": [
+    "uk",
+    "ru"
+   ],
+   "podpis-documenta-sed": [
+    "uk",
+    "ru"
+   ],
+   "portal-setup": [
+    "uk",
+    "ru"
+   ],
+   "preparation-of-the-route": [
+    "uk",
+    "ru"
+   ],
+   "print-resolution": [
+    "uk",
+    "ru"
+   ],
+   "project-wizard": [
+    "uk",
+    "ru"
+   ],
+   "project-work": [
+    "uk",
+    "ru"
+   ],
+   "ptah": [
+    "uk",
+    "ru"
+   ],
+   "qrcode": [
+    "uk",
+    "ru"
+   ],
+   "reference-dictionaries": [
+    "uk",
+    "ru"
+   ],
+   "regnum-reserv": [
+    "uk",
+    "ru"
+   ],
+   "reminder": [
+    "uk",
+    "ru"
+   ],
+   "reminder-email": [
+    "uk",
+    "ru"
+   ],
+   "report-work": [
+    "uk",
+    "ru"
+   ],
+   "resolution-work": [
+    "uk",
+    "ru"
+   ],
+   "route-template-points": [
+    "uk",
+    "ru"
+   ],
+   "routing-notifier": [
+    "uk",
+    "ru"
+   ],
+   "server-tasks": [
+    "uk",
+    "ru"
+   ],
+   "server-upgrade": [
+    "uk",
+    "ru"
+   ],
+   "sev": [
+    "uk",
+    "ru"
+   ],
+   "sev-npa": [
+    "uk",
+    "ru"
+   ],
+   "sev-settings": [
+    "uk",
+    "ru"
+   ],
+   "shared-contacts": [
+    "uk",
+    "ru"
+   ],
+   "show-vice-performers": [
+    "uk",
+    "ru"
+   ],
+   "sql-economy": [
+    "uk",
+    "ru"
+   ],
+   "statistic": [
+    "uk",
+    "ru"
+   ],
+   "storage": [
+    "uk",
+    "ru"
+   ],
+   "svjazannye-dokumenty": [
+    "uk",
+    "ru"
+   ],
+   "system-settings": [
+    "uk",
+    "ru"
+   ],
+   "tendencii-razvitija-sed": [
+    "uk",
+    "ru"
+   ],
+   "test-the-route": [
+    "uk",
+    "ru"
+   ],
+   "testimonial1": [
+    "uk",
+    "ru"
+   ],
+   "testimonial2": [
+    "uk",
+    "ru"
+   ],
+   "testimonial3": [
+    "uk",
+    "ru"
+   ],
+   "two-factor-auth": [
+    "uk",
+    "ru"
+   ],
+   "user-management": [
+    "uk",
+    "ru"
+   ],
+   "user-manual": [
+    "uk",
+    "ru"
+   ],
+   "user-templates": [
+    "uk",
+    "ru"
+   ],
+   "users-groups": [
+    "uk",
+    "ru"
+   ],
+   "vchasno": [
+    "uk",
+    "ru"
+   ],
+   "vhod-ishod": [
+    "uk",
+    "ru"
+   ],
+   "vhodyashiye": [
+    "uk",
+    "ru"
+   ],
+   "vybor-sed": [
+    "uk",
+    "ru"
+   ],
+   "web-server": [
+    "uk",
+    "ru"
+   ],
+   "web-server-settings": [
+    "uk",
+    "ru"
+   ],
+   "webportal": [
+    "uk",
+    "ru"
+   ],
+   "workflows-dictionary": [
+    "uk",
+    "ru"
+   ]
+  }
+ },
+ "erpfoss": {
+  "spaces": [
+   {
+    "route": "docs",
+    "language": "uk",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "commerce-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "znayomstvo-z-programoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "shvidkiy-start",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "interfeys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-programi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-poshtovoi-sistemi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gatsby-pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kliyenti-ta-postachalniki",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-tovarami",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "import-produktiv-ta-partneriv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "yak-zminiti-czinu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vartist-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rozrakhunki-v-valyut",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "avansovi-platezhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vidalennya-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvit-valoviy-pributok",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-ta-upravlinnya-skladom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "roztoshuvannya-ta-sklad",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-skladu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-rukhu-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "programa-dlya-skladskogo-obliku",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rizni-odiniczi-vimiru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "skladski-zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "tochka-prodazhu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kt-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannja-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prro-v-bazovomu-paketi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-v-paketi-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "integracziya-z-novoyu-poshtoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-modulyu-integracziya-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oformlennya-dostavki-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prom-ua",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "dms-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-korystuvachamy-ta-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhid-do-sistemy-dokumentoobigu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-iz-spivrobitnykamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-pravamy-dostupu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vyhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vnutrishnimy-dokumentamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reestracija-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "elektronnyj-cifrovyj-pidpys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblikovi-zapysy-demo-rishennja",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "production-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-virobnicztvom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gatsby-upravlinnya-virobnicztvom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-3801",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5289",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5619",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5784",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6000",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6200",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6235",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6258",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6365",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6599",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6679",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9635",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9649",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9721",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9763",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10760",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10766",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10772",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10777",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10909",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10917",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-11341",
+      "published": 0,
+      "sidebar": 1
+     }
+    ]
+   },
+   {
+    "route": "ru/docs",
+    "language": "ru",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "commerce-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "znayomstvo-z-programoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "shvidkiy-start",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "interfeys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-programi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-poshtovoi-sistemi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gatsby-pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kliyenti-ta-postachalniki",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-tovarami",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "import-produktiv-ta-partneriv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "yak-zminiti-czinu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vartist-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rozrakhunki-v-valyut",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "avansovi-platezhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vidalennya-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvit-valoviy-pributok",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-ta-upravlinnya-skladom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "roztoshuvannya-ta-sklad",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-skladu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-rukhu-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "programa-dlya-skladskogo-obliku",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rizni-odiniczi-vimiru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "skladski-zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "tochka-prodazhu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kt-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannja-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prro-v-bazovomu-paketi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-v-paketi-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "integracziya-z-novoyu-poshtoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-modulyu-integracziya-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oformlennya-dostavki-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prom-ua",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "dms-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-korystuvachamy-ta-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhid-do-sistemy-dokumentoobigu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-iz-spivrobitnykamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-pravamy-dostupu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vyhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vnutrishnimy-dokumentamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reestracija-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "elektronnyj-cifrovyj-pidpys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblikovi-zapysy-demo-rishennja",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "production-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-virobnicztvom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-3804",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5291",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5776",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5786",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-5972",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6090",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6191",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6256",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-6369",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-8532",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9535",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-9658",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10113",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10915",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-10946",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-11005",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-11081",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-11099",
+      "published": 0,
+      "sidebar": 1
+     },
+     {
+      "slug": "draft-11139",
+      "published": 0,
+      "sidebar": 1
+     }
+    ]
+   },
+   {
+    "route": "en/docs",
+    "language": "en",
+    "pages": [
+     {
+      "slug": "docs-overview",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "commerce-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "znayomstvo-z-programoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "shvidkiy-start",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "interfeys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-programi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-poshtovoi-sistemi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gatsby-pochatok-roboti",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kliyenti-ta-postachalniki",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-tovarami",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "import-produktiv-ta-partneriv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zakupivli-ta-prodazhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "yak-zminiti-czinu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vartist-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rozrakhunki-v-valyut",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "avansovi-platezhi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vidalennya-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvit-valoviy-pributok",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-ta-upravlinnya-skladom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "roztoshuvannya-ta-sklad",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-skladu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblik-rukhu-tovaru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "programa-dlya-skladskogo-obliku",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "rizni-odiniczi-vimiru",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "skladski-zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "tochka-prodazhu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "kt-settings",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "zvity",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannja-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prro-v-bazovomu-paketi",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-v-paketi-prro",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "integracziya-z-novoyu-poshtoyu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "nalashtuvannya-modulyu-integracziya-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oformlennya-dostavki-nova-poshta",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-prom-ua",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "dms-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-korystuvachamy-ta-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "vhid-do-sistemy-dokumentoobigu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-iz-spivrobitnykamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-pidrozdilamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-pravamy-dostupu",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vyhidnymy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "robota-z-vnutrishnimy-dokumentamy",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "reestracija-dokumentiv",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "elektronnyj-cifrovyj-pidpys",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "oblikovi-zapysy-demo-rishennja",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "production-documentation",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "upravlinnya-virobnicztvom",
+      "published": 1,
+      "sidebar": 1
+     },
+     {
+      "slug": "gatsby-upravlinnya-virobnicztvom",
+      "published": 1,
+      "sidebar": 1
+     }
+    ]
+   }
+  ],
+  "pairs": {
+   "avansovi-platezhi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "commerce-documentation": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "dms-documentation": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "docs-overview": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "elektronnyj-cifrovyj-pidpys": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "gatsby-pochatok-roboti": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "gatsby-upravlinnya-virobnicztvom": [
+    "uk",
+    "en"
+   ],
+   "import-produktiv-ta-partneriv": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "integracziya-z-novoyu-poshtoyu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "interfeys": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "kliyenti-ta-postachalniki": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "kt-settings": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "nalashtuvannja-prro": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "nalashtuvannya-modulyu-integracziya-nova-poshta": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "nalashtuvannya-poshtovoi-sistemi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "nalashtuvannya-programi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "nalashtuvannya-ta-upravlinnya-skladom": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "oblik-rukhu-tovaru": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "oblik-skladu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "oblikovi-zapysy-demo-rishennja": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "oformlennya-dostavki-nova-poshta": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "pochatok-roboti": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "production-documentation": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "programa-dlya-skladskogo-obliku": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "reestracija-dokumentiv": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "rizni-odiniczi-vimiru": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-iz-spivrobitnykamy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-v-paketi-prro": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-pidrozdilamy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-prom-ua": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-prro-v-bazovomu-paketi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-vhidnymy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-vnutrishnimy-dokumentamy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "robota-z-vyhidnymy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "rozrakhunki-v-valyut": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "roztoshuvannya-ta-sklad": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "shvidkiy-start": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "skladski-zvity": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "tochka-prodazhu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "upravlinnya-korystuvachamy-ta-pidrozdilamy": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "upravlinnya-pravamy-dostupu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "upravlinnya-tovarami": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "upravlinnya-virobnicztvom": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "vartist-tovaru": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "vhid-do-sistemy-dokumentoobigu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "vidalennya-dokumentiv": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "yak-zminiti-czinu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "zakupivli-ta-prodazhi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "zakupivli-ta-prodazi": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "znayomstvo-z-programoyu": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "zvit-valoviy-pributok": [
+    "uk",
+    "ru",
+    "en"
+   ],
+   "zvity": [
+    "uk",
+    "ru",
+    "en"
+   ]
+  }
+ }
+}
