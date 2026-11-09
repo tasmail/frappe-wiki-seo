@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="frappe">
+
+	
+	<meta name="title" content="Авансові платежі"><meta name="description" content="Як в ERP FOSS обліковувати авансові платежі постачальникам і від клієнтів та враховувати їх при остаточній оплаті рахунку."><meta name="image" content="https://erp.foss.ua/files/erpfoss-share-uk.png"><meta property="og:image:width"  content="1200"><meta property="og:image:height"  content="630"><meta name="language" content="en"><meta property="og:type"  content="article"><meta property="og:title"  content="Авансові платежі"><meta property="og:description"  content="Як в ERP FOSS обліковувати авансові платежі постачальникам і від клієнтів та враховувати їх при остаточній оплаті рахунку."><meta property="og:image"  content="https://erp.foss.ua/files/erpfoss-share-uk.png"><meta name="twitter:title" content="Авансові платежі"><meta name="twitter:description" content="Як в ERP FOSS обліковувати авансові платежі постачальникам і від клієнтів та враховувати їх при остаточній оплаті рахунку."><meta name="twitter:image" content="https://erp.foss.ua/files/erpfoss-share-uk.png"><meta name="twitter:card" content="summary_large_image">
+	
+
+	<title>Авансові платежі</title>
+
+	
+	<link rel="shortcut icon" href="/assets/frappe/images/frappe-favicon.svg"
+		type="image/x-icon">
+	
+
+	<link rel="canonical" href="https://erp.foss.ua/docs/avansovi-platezhi"><!-- site-analytics:start -->
+<script>
+(function () {
+  if (!new RegExp("^/(ru/|en/)?docs(/|$)").test(location.pathname)) return;
+  var title = document.querySelector('meta[name="title"]');
+  if (title && ["404", "Error"].indexOf(title.getAttribute('content')) >= 0) return;
+  var tag = document.createElement('script'); tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent("G-KFPX8E57M4");
+  document.head.appendChild(tag);
+  var ID = "G-KFPX8E57M4", KEY = "site_analytics_consent", TEXT = JSON.parse("{\"uk\": {\"message\": \"\\u041c\\u0438 \\u0432\\u0438\\u043a\\u043e\\u0440\\u0438\\u0441\\u0442\\u043e\\u0432\\u0443\\u0454\\u043c\\u043e Google Analytics, \\u0449\\u043e\\u0431 \\u0440\\u0430\\u0445\\u0443\\u0432\\u0430\\u0442\\u0438 \\u0432\\u0456\\u0434\\u0432\\u0456\\u0434\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f \\u0441\\u0442\\u043e\\u0440\\u0456\\u043d\\u043e\\u043a. \\u0412\\u0456\\u043d \\u0432\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u044e\\u0454 cookie. \\u0412\\u0438 \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u0432\\u0456\\u0434\\u043c\\u043e\\u0432\\u0438\\u0442\\u0438\\u0441\\u044c.\", \"accept\": \"\\u041e\\u043a\", \"decline\": \"\\u0412\\u0456\\u0434\\u043c\\u043e\\u0432\\u0438\\u0442\\u0438\\u0441\\u044c\", \"label\": \"Cookie \\u0442\\u0430 \\u0430\\u043d\\u0430\\u043b\\u0456\\u0442\\u0438\\u043a\\u0430\"}, \"en\": {\"message\": \"We use Google Analytics to count visits to our pages. It sets cookies. You can opt out.\", \"accept\": \"OK\", \"decline\": \"Opt out\", \"label\": \"Cookies and analytics\"}, \"ru\": {\"message\": \"\\u041c\\u044b \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c Google Analytics, \\u0447\\u0442\\u043e\\u0431\\u044b \\u0441\\u0447\\u0438\\u0442\\u0430\\u0442\\u044c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u044f \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446. \\u041e\\u043d \\u0443\\u0441\\u0442\\u0430\\u043d\\u0430\\u0432\\u043b\\u0438\\u0432\\u0430\\u0435\\u0442 cookie. \\u0412\\u044b \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043e\\u0442\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c\\u0441\\u044f.\", \"accept\": \"\\u041e\\u043a\", \"decline\": \"\\u041e\\u0442\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c\\u0441\\u044f\", \"label\": \"Cookie \\u0438 \\u0430\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u043a\\u0430\"}}");
+  var memory = null, configured = false;
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  function stored() {
+    try { var v = localStorage.getItem(KEY); if (v) return v; } catch (e) {}
+    var m = new RegExp('(?:^|;\\s*)' + KEY + '=([^;]*)').exec(document.cookie || '');
+    return m ? m[1] : memory;
+  }
+  function store(value) {
+    memory = value;
+    try { localStorage.setItem(KEY, value); return; } catch (e) {}
+    document.cookie = KEY + '=' + value + '; max-age=31536000; path=/; SameSite=Lax; Secure';
+  }
+  function configure() {
+    if (configured) return;
+    configured = true; gtag('js', new Date()); gtag('config', ID, {page_location: location.origin + location.pathname, page_referrer: (document.referrer || '').split(/[?#]/)[0]});
+  }
+  function clearCookies() {
+    var names = ['_ga', '_ga_' + ID.slice(2)], parts = location.hostname.split('.'), gone = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    names.forEach(function (n) {
+      document.cookie = n + gone;
+      for (var i = 0; i < parts.length - 1; i++) {
+        var d = parts.slice(i).join('.');
+        document.cookie = n + gone + '; domain=' + d; document.cookie = n + gone + '; domain=.' + d;
+      }
+    });
+  }
+  function grant() { gtag('consent', 'update', {analytics_storage: 'granted'}); configure(); }
+  function deny() { gtag('consent', 'update', {analytics_storage: 'denied'}); clearCookies(); }
+  function banner() {
+    var old = document.getElementById('site-analytics-banner'); if (old) old.remove();
+    var code = (document.documentElement.lang || 'en').slice(0, 2);
+    var t = TEXT[code === 'uk' || code === 'ru' ? code : 'en'];
+    var bar = document.createElement('div'); bar.id = 'site-analytics-banner';
+    bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', t.label);
+    bar.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;background:#111827;color:#fff;padding:14px 16px;border-radius:10px;font:14px/1.45 system-ui,sans-serif;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;box-shadow:0 8px 24px rgba(0,0,0,.25)';
+    var p = document.createElement('span'); p.textContent = t.message; p.style.flex = '1 1 280px';
+    function button(label, primary, value) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = label;
+      b.style.cssText = 'cursor:pointer;border-radius:8px;padding:8px 14px;font:inherit;border:1px solid #fff;' + (primary ? 'background:#fff;color:#111827' : 'background:transparent;color:#fff');
+      b.onclick = function () {
+        store(value); bar.remove();
+        if (value === 'granted') grant(); else deny();
+      };
+      return b;
+    }
+    bar.append(p, button(t.decline, false, 'denied'), button(t.accept, true, 'granted'));
+    document.body.appendChild(bar);
+  }
+  function whenReady(fn) { if (document.body) fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  var choice = stored();
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: choice === 'denied' ? 'denied' : 'granted'});
+  if (choice === 'denied') clearCookies(); else configure();
+  if (!choice) whenReady(banner);
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href$="#cookies"]') : null;
+    if (a) { e.preventDefault(); banner(); }
+  });
+  window.addEventListener('hashchange', function () { if (location.hash === '#cookies') banner(); });
+  if (location.hash === '#cookies') whenReady(banner);
+})();
+</script>
+<!-- site-analytics:end --><link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.O4PCBGQU.css">
+
+<link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/wiki.bundle.6E6VMVKH.css">
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/contributions.bundle.P6RUA62T.css">
+
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/wiki.bundle.6E6VMVKH.css">
+
+
+	<script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function (fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = 0;
+		window.socketio_port = 9000;
+		window.show_language_picker = false;
+	</script>
+</head>
+
+<body frappe-session-status="logged-out"
+	data-path="docs/avansovi-platezhi"
+	class="">
+	<script>
+		const isUserPreferenceDarkMode = localStorage.getItem("darkMode");
+		const isSystemPreferenceDarkMode = window.matchMedia?.(
+			"(prefers-color-scheme: dark)"
+		)?.matches;
+		const darkModeState = isUserPreferenceDarkMode
+			? isUserPreferenceDarkMode == "true"
+			: isSystemPreferenceDarkMode;
+		if (darkModeState) {
+			document.body.classList.add("dark");
+		}
+	</script>
+	<!-- fixture: SVG sprites cut -->
+
+<nav class="wiki-navbar navbar navbar-light navbar-expand-lg sticky-top pr-4">
+  <div class="navbar-brand-container">
+    <a class="navbar-brand" alt="Go to home page" data-prefix=""
+      href=" /"><span>Home</span></a>
+    
+  </div>
+<!-- fixture: navbar items, sidebar and content cut -->
+</nav>
+<script>(function(){function f(){var b=document.querySelector('.navbar-brand-container');if(!b||b.querySelector('.fd-back'))return;var a=document.createElement('a');a.className='fd-back';var p=location.pathname,l=p.indexOf('/ru/')===0?'/ru':p.indexOf('/en/')===0?'/en':'/';a.href=l;a.textContent=l==='/en'?'← To the site':'← На сайт';a.style.cssText='margin-left:14px;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;color:inherit';b.style.display='flex';b.style.alignItems='center';b.appendChild(a);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();})();(function () {
+	var lang = location.pathname.indexOf('/ru/') === 0 ? 'ru' : location.pathname.indexOf('/en/') === 0 ? 'en' : 'uk';
+	var words = {
+		ru: {manual: 'Оглавление', manualTitle: 'Оглавление руководства', article: 'В этой статье', close: 'Закрыть'},
+		en: {manual: 'Contents', manualTitle: 'Contents of the manual', article: 'In this article', close: 'Close'},
+		uk: {manual: 'Зміст', manualTitle: 'Зміст посібника', article: 'У цій статті', close: 'Закрити'}
+	}[lang];
+	var css = '.fd-nav-bar,.fd-nav-btn,.fd-nav-head,.fd-nav-back{display:none}'
+		+ '.fd-nav-btn[hidden]{display:none!important}'
+		+ '.sidebar-item.active{background:rgba(217,56,30,.09);box-shadow:inset 3px 0 0 #d9381e}'
+		+ 'body.dark .sidebar-item.active{background:rgba(217,56,30,.16)}'
+		+ '.sidebar-item.active a{color:var(--text-color)!important;font-weight:600!important}'
+		+ '@media (max-width:1199.98px){'
+		+ 'html.fd-lock{overflow:hidden}'
+		+ '.fd-nav-bar{display:flex;gap:8px;position:sticky;top:0;z-index:900;padding:8px 0;margin-bottom:8px;'
+		+ 'background:var(--background-color,#fff);border-bottom:1px solid var(--border-color,#ddd)}'
+		+ '.fd-nav-bar.fd-empty{display:none}'
+		+ '.wiki-content [id]{scroll-margin-top:var(--fd-bar-offset,64px)}'
+		+ '.fd-nav-btn.fd-toc-btn{display:inline-flex;margin-left:auto}'
+		+ '.page-toc.fd-open{display:block!important;position:fixed;top:0;right:0;bottom:0;margin:0;height:auto;'
+		+ 'max-width:none;width:min(20rem,88vw);z-index:1060;padding:0 16px 40px;overflow-y:auto;scrollbar-width:thin;'
+		+ 'background:var(--background-color,#fff);box-shadow:-8px 0 24px rgba(0,0,0,.2)}'
+		+ '.page-toc.fd-open .page-toc-title{display:none}'
+		+ '.fd-nav-btn{align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border-color,#ccc);'
+		+ 'border-radius:999px;background:transparent;color:var(--text-color,#333);font-family:inherit;'
+		+ 'font-size:13px;font-weight:600;line-height:1;cursor:pointer}'
+		+ '.fd-nav-btn[aria-expanded=true]{background:#d9381e;border-color:#d9381e;color:#fff}'
+		+ '.fd-nav-btn svg{flex:none}'
+		+ '.fd-open>.fd-nav-head{display:flex;position:sticky;top:0;z-index:1;align-items:center;'
+		+ 'justify-content:space-between;gap:12px;width:auto;border-left:0;padding:14px 4px 10px;margin-bottom:8px;'
+		+ 'border-bottom:1px solid var(--border-color,#ddd);background:inherit;font-weight:700;font-size:15px;'
+		+ 'color:var(--text-color,#333)}'
+		+ '.fd-nav-head button{border:0;background:none;font-size:24px;line-height:1;padding:0 4px;color:inherit;'
+		+ 'cursor:pointer}'
+		+ '.fd-nav-back.fd-on{display:block;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1055;'
+		+ 'background:rgba(0,0,0,.4)}'
+		+ '}'
+		+ '@media (max-width:991.98px){'
+		+ '.fd-nav-btn.fd-manual-btn{display:inline-flex}'
+		+ '.sidebar-column.fd-open{display:block!important;position:fixed;top:0;left:0;bottom:0;margin:0;z-index:1060;'
+		+ 'width:min(20rem,88vw);overflow-y:auto;background:var(--sidebar-bg-color,#fff);'
+		+ 'box-shadow:8px 0 24px rgba(0,0,0,.2)}'
+		+ '.sidebar-column.fd-open .doc-sidebar{height:auto;padding-top:0}'
+		+ '.sidebar-column.fd-open .web-sidebar{width:100%;height:auto;overflow:visible}'
+		+ '.wiki-navbar .navbar-toggler,.wiki-navbar .sm-sidebar{display:none!important}'
+		+ '.wiki-navbar .navbar-collapse.wiki-navbar-container{display:flex!important;flex-basis:auto;flex-grow:0;'
+		+ 'flex-shrink:0;padding-right:0}'
+		+ '.wiki-navbar{flex-wrap:nowrap}'
+		+ '.wiki-navbar .navbar-brand-container{width:auto;max-width:none;min-width:0;overflow:hidden;flex:0 1 auto}'
+		+ '.wiki-navbar .navbar-brand{flex:none}'
+		+ '.wiki-navbar .fd-back{min-width:0;overflow:hidden;text-overflow:ellipsis}'
+		+ '.wiki-navbar .mobile-search-icon{flex-shrink:0}'
+		+ '.wiki-navbar .wiki-navbar-container .navbar-nav{width:auto;max-width:none;height:auto;border-left:0;'
+		+ 'flex-direction:row;align-items:center;padding:0 8px!important}'
+		+ '}';
+	var icons = {
+		manual: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+			+ 'stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>',
+		toc: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+			+ 'stroke-linecap="round"><path d="M5 6h14M9 12h10M9 18h10"/><circle cx="4.5" cy="12" r=".6"/>'
+			+ '<circle cx="4.5" cy="18" r=".6"/></svg>'
+	};
+
+	// scrollTopFor:begin
+	function scrollTopFor(box, item, scrollTop, head) {
+		if (!box.height || !item.height) {
+			return null;
+		}
+		var top = box.top + head;
+		if (item.top >= top && item.bottom <= box.bottom) {
+			return null;
+		}
+		return Math.max(0, Math.round(scrollTop + (item.top - top) - (box.bottom - top - item.height) / 2));
+	}
+	// scrollTopFor:end
+
+	// The open article is centred in the manual when it is out of view. Only the scroll box of the manual moves, never
+	// the page: the column itself in the phone panel, the inner box on a desktop. A hidden item has no height.
+	function revealActive(panel) {
+		try {
+			var column = document.querySelector('.sidebar-column');
+			var item = column && column.querySelector('.sidebar-item.active');
+			var box = panel ? column : column && column.querySelector('.web-sidebar');
+			if (!item || !box) {
+				return;
+			}
+			var head = panel ? column.querySelector('.fd-nav-head') : null;
+			var next = scrollTopFor(
+				box.getBoundingClientRect(), item.getBoundingClientRect(), box.scrollTop, head ? head.offsetHeight : 0
+			);
+			if (next !== null) {
+				box.scrollTop = next;
+			}
+		} catch (error) {
+			/* the reader scrolls by hand */
+		}
+	}
+
+	function init() {
+		var manual = document.querySelector('.sidebar-column');
+		var toc = document.querySelector('.page-toc');
+		if (document.querySelector('.fd-nav-back') || !(manual || toc)) {
+			return;
+		}
+		var style = document.createElement('style');
+		style.textContent = css;
+		document.head.appendChild(style);
+		var back = document.createElement('div');
+		back.className = 'fd-nav-back';
+		document.body.appendChild(back);
+		// the strip lives in the article column (a stretched flex item): the left column, which is built around a
+		// sticky navbar, is not touched
+		var bar = document.createElement('div');
+		bar.className = 'fd-nav-bar';
+		var host = document.querySelector('.main-column');
+		var wikiNav = document.querySelector('.wiki-navbar');
+		if (host) {
+			host.insertBefore(bar, host.firstChild);
+		} else if (wikiNav && wikiNav.parentNode) {
+			wikiNav.parentNode.insertBefore(bar, wikiNav.nextSibling);
+		} else {
+			document.body.insertBefore(bar, document.body.firstChild);
+		}
+		var buttons = [];
+		var open = null;
+		var tocButton = null;
+
+		function close() {
+			var was = open;
+			open = null;
+			back.classList.remove('fd-on');
+			document.documentElement.classList.remove('fd-lock');
+			if (was) {
+				was.panel.classList.remove('fd-open');
+				was.panel.removeAttribute('role');
+				was.panel.removeAttribute('aria-modal');
+				was.button.setAttribute('aria-expanded', 'false');
+				if (!was.button.hidden) {
+					was.button.focus();
+				}
+			}
+		}
+		function attach(panel, kind, title, label) {
+			if (!panel) {
+				return null;
+			}
+			panel.id = panel.id || 'fd-panel-' + kind;
+			var head = document.createElement('div');
+			head.className = 'fd-nav-head';
+			head.innerHTML = '<span></span><button type="button" aria-label="' + words.close + '">&times;</button>';
+			head.firstChild.textContent = title;
+			head.lastChild.addEventListener('click', close);
+			panel.insertBefore(head, panel.firstChild);
+			var button = document.createElement('button');
+			button.type = 'button';
+			button.className = 'fd-nav-btn fd-' + kind + '-btn';
+			button.setAttribute('aria-expanded', 'false');
+			button.setAttribute('aria-controls', panel.id);
+			button.innerHTML = icons[kind] + '<span></span>';
+			button.lastChild.textContent = label;
+			button.addEventListener('click', function () {
+				var was = open && open.panel === panel;
+				close();
+				if (was || button.hidden) {
+					return;
+				}
+				panel.classList.add('fd-open');
+				panel.setAttribute('role', 'dialog');
+				panel.setAttribute('aria-label', title);
+				panel.setAttribute('aria-modal', 'true');
+				button.setAttribute('aria-expanded', 'true');
+				back.classList.add('fd-on');
+				document.documentElement.classList.add('fd-lock');
+				open = {panel: panel, button: button};
+				head.lastChild.focus({preventScroll: true});
+				if (kind === 'manual') {
+					revealActive(true);
+				}
+			});
+			// the links of the contents scroll without a history call; a page of the manual is closed by the history wrapper
+			panel.addEventListener('click', function (event) {
+				var link = event.target.closest ? event.target.closest('a') : null;
+				if (link && open && open.panel === panel) {
+					close();
+				}
+			});
+			if (kind === 'manual') {
+				// the Wiki navigates on touchstart of a link and cancels the scroll of the panel: stop that event
+				// before it reaches the link (the click that follows a tap still navigates)
+				panel.addEventListener('touchstart', function (event) {
+					var link = event.target.closest ? event.target.closest('a') : null;
+					if (link && open && open.panel === panel) {
+						event.stopPropagation();
+					}
+				}, {capture: true, passive: true});
+			}
+			buttons.push(button);
+			bar.appendChild(button);
+			return button;
+		}
+		function updateBar() {
+			var visible = buttons.some(function (button) {
+				return !button.hidden && window.getComputedStyle(button).display !== 'none';
+			});
+			bar.classList.toggle('fd-empty', !visible);
+			var sticky = wikiNav && window.getComputedStyle(wikiNav).position === 'sticky';
+			var navHeight = sticky ? wikiNav.offsetHeight : 0;
+			bar.style.top = navHeight + 'px';
+			// measured only after fd-empty is applied: an empty or hidden strip counts as 0
+			var barHeight = window.getComputedStyle(bar).display !== 'none' ? bar.offsetHeight : 0;
+			document.documentElement.style.setProperty('--fd-bar-offset', (navHeight + barHeight + 8) + 'px');
+		}
+		function refreshToc() {
+			if (!tocButton) {
+				return;
+			}
+			var shown = !!toc.querySelector('a') && !toc.classList.contains('hide');
+			tocButton.hidden = !shown;
+			if (!shown && open && open.panel === toc) {
+				close();
+			}
+			updateBar();
+		}
+		function watch(query, panel) {
+			if (!panel || !window.matchMedia) {
+				return;
+			}
+			var list = window.matchMedia(query);
+			var changed = function (event) {
+				if (!event.matches && open && open.panel === panel) {
+					close();
+				}
+				updateBar();
+			};
+			if (list.addEventListener) {
+				list.addEventListener('change', changed);
+			} else if (list.addListener) {
+				list.addListener(changed);
+			}
+		}
+
+		attach(manual, 'manual', words.manualTitle, words.manual);
+		tocButton = attach(toc, 'toc', words.article, words.article);
+		refreshToc();
+		updateBar();
+		window.addEventListener('resize', updateBar);
+		if (window.ResizeObserver) {
+			var sizes = new ResizeObserver(updateBar);
+			sizes.observe(bar);
+			if (wikiNav) {
+				sizes.observe(wikiNav);
+			}
+		}
+		if (toc && window.MutationObserver) {
+			// the Wiki swaps the contents on navigation and toggles hide in the edit mode; scrolling toggles
+			// classes on the links, which the second observation (no subtree) does not see
+			var observer = new MutationObserver(refreshToc);
+			observer.observe(toc, {childList: true, subtree: true});
+			observer.observe(toc, {attributes: true, attributeFilter: ['class']});
+		}
+		// the Wiki scrolls the manual itself 50 ms after the page is ready; this runs after it and acts only if the item
+		// is still out of view
+		setTimeout(function () {
+			revealActive(false);
+		}, 300);
+		watch('(max-width:991.98px)', manual);
+		watch('(max-width:1199.98px)', toc);
+		// the Wiki loads a page of the manual by ajax after history.pushState (a phone sends no click: the Wiki cancels
+		// touchstart), so every navigation closes the panel; an error of close() must never break the Wiki
+		['pushState', 'replaceState'].forEach(function (name) {
+			var original = window.history[name];
+			if (typeof original !== 'function') {
+				return;
+			}
+			window.history[name] = function () {
+				try {
+					close();
+				} catch (error) {
+					/* the navigation goes on */
+				}
+				return original.apply(this, arguments);
+			};
+		});
+		window.addEventListener('popstate', close);
+		window.addEventListener('pageshow', function (event) {
+			if (event.persisted) {
+				close();
+			}
+		});
+		back.addEventListener('click', close);
+		document.addEventListener('keydown', function (event) {
+			if (!open) {
+				return;
+			}
+			if (event.key === 'Escape') {
+				close();
+				return;
+			}
+			if (event.key !== 'Tab') {
+				return;
+			}
+			var items = Array.prototype.filter.call(open.panel.querySelectorAll('a[href],button'), function (item) {
+				return item.offsetParent !== null;
+			});
+			if (!items.length) {
+				return;
+			}
+			var first = items[0];
+			var last = items[items.length - 1];
+			if (!open.panel.contains(document.activeElement)
+				|| (event.shiftKey && document.activeElement === first)
+				|| (!event.shiftKey && document.activeElement === last)) {
+				(event.shiftKey ? last : first).focus();
+				event.preventDefault();
+			}
+		});
+	}
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+})();
+(function () {
+	var SPACES = {"docs":"uk","ru/docs":"ru","en/docs":"en"}, PAIRS = {"avansovi-platezhi":["uk","ru","en"],"commerce-documentation":["uk","ru","en"],"dms-documentation":["uk","ru","en"],"docs-overview":["uk","ru","en"],"elektronnyj-cifrovyj-pidpys":["uk","ru","en"],"gatsby-pochatok-roboti":["uk","ru","en"],"gatsby-upravlinnya-virobnicztvom":["uk","en"],"import-produktiv-ta-partneriv":["uk","ru","en"],"integracziya-z-novoyu-poshtoyu":["uk","ru","en"],"interfeys":["uk","ru","en"],"kliyenti-ta-postachalniki":["uk","ru","en"],"kt-settings":["uk","ru","en"],"nalashtuvannja-prro":["uk","ru","en"],"nalashtuvannya-modulyu-integracziya-nova-poshta":["uk","ru","en"],"nalashtuvannya-poshtovoi-sistemi":["uk","ru","en"],"nalashtuvannya-programi":["uk","ru","en"],"nalashtuvannya-ta-upravlinnya-skladom":["uk","ru","en"],"oblik-rukhu-tovaru":["uk","ru","en"],"oblik-skladu":["uk","ru","en"],"oblikovi-zapysy-demo-rishennja":["uk","ru","en"],"oformlennya-dostavki-nova-poshta":["uk","ru","en"],"pochatok-roboti":["uk","ru","en"],"production-documentation":["uk","ru","en"],"programa-dlya-skladskogo-obliku":["uk","ru","en"],"reestracija-dokumentiv":["uk","ru","en"],"rizni-odiniczi-vimiru":["uk","ru","en"],"robota-iz-spivrobitnykamy":["uk","ru","en"],"robota-v-paketi-prro":["uk","ru","en"],"robota-z-pidrozdilamy":["uk","ru","en"],"robota-z-prom-ua":["uk","ru","en"],"robota-z-prro-v-bazovomu-paketi":["uk","ru","en"],"robota-z-vhidnymy":["uk","ru","en"],"robota-z-vnutrishnimy-dokumentamy":["uk","ru","en"],"robota-z-vyhidnymy":["uk","ru","en"],"rozrakhunki-v-valyut":["uk","ru","en"],"roztoshuvannya-ta-sklad":["uk","ru","en"],"shvidkiy-start":["uk","ru","en"],"skladski-zvity":["uk","ru","en"],"tochka-prodazhu":["uk","ru","en"],"upravlinnya-korystuvachamy-ta-pidrozdilamy":["uk","ru","en"],"upravlinnya-pravamy-dostupu":["uk","ru","en"],"upravlinnya-tovarami":["uk","ru","en"],"upravlinnya-virobnicztvom":["uk","ru","en"],"vartist-tovaru":["uk","ru","en"],"vhid-do-sistemy-dokumentoobigu":["uk","ru","en"],"vidalennya-dokumentiv":["uk","ru","en"],"yak-zminiti-czinu":["uk","ru","en"],"zakupivli-ta-prodazhi":["uk","ru","en"],"zakupivli-ta-prodazi":["uk","ru","en"],"znayomstvo-z-programoyu":["uk","ru","en"],"zvit-valoviy-pributok":["uk","ru","en"],"zvity":["uk","ru","en"]};
+	function apply() {
+		var match = /^\/((?:ru\/|en\/)?docs)(?:\/([^\/]+))?\/?$/.exec(location.pathname);
+		if (!match || !SPACES[match[1]]) {
+			return;
+		}
+		document.documentElement.lang = SPACES[match[1]];
+		Array.prototype.forEach.call(document.querySelectorAll('link[data-fd-hreflang]'), function (link) {
+			link.remove();
+		});
+		var languages = match[2] && PAIRS[match[2]];
+		if (!languages) {
+			return;
+		}
+		var spaces = {};
+		Object.keys(SPACES).forEach(function (space) {
+			spaces[SPACES[space]] = space;
+		});
+		var add = function (code, language) {
+			var link = document.createElement('link');
+			link.rel = 'alternate';
+			link.hreflang = code;
+			link.href = location.origin + '/' + spaces[language] + '/' + match[2];
+			link.setAttribute('data-fd-hreflang', '');
+			document.head.appendChild(link);
+		};
+		languages.forEach(function (language) {
+			add(language, language);
+		});
+		add('x-default', languages.indexOf('uk') >= 0 ? 'uk' : languages[0]);
+	}
+	apply();
+	['pushState', 'replaceState'].forEach(function (name) {
+		var original = window.history[name];
+		if (typeof original !== 'function') {
+			return;
+		}
+		window.history[name] = function () {
+			var result = original.apply(this, arguments);
+			try {
+				apply();
+			} catch (error) {
+				/* the navigation goes on */
+			}
+			return result;
+		};
+	});
+	window.addEventListener('popstate', apply);
+})();
+</script>
+</body>
+</html>
+<!-- fixture: cut by scripts/cut_fixture.py from https://erp.foss.ua/docs/avansovi-platezhi as served on 2026-11-09 (Wiki 2372f859f6) -->

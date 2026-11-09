@@ -1,0 +1,233 @@
+{
+ "source": "tasmail/erpnext-infra branch wiki-seo-hook-infra 7bbe411: wanted(site, mode)['wiki_seo'] of press/wiki_seo_site.py for every site of SITES and every mode",
+ "sites": {
+  "fossdocqa.erp-crm.org": {
+   "on": {
+    "enabled": true,
+    "hosts": [
+     "site-qa.fossdoc.com",
+     "fossdocqa.erp-crm.org"
+    ],
+    "base_url": "https://site-qa.fossdoc.com",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | FossDoc",
+    "site_name": "FossDoc",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps",
+     "cart",
+     "orders",
+     "invoices",
+     "quotations",
+     "shipments",
+     "issues",
+     "addresses",
+     "wishlist",
+     "wayforpay_checkout",
+     "wayforpay_result",
+     "payment-success",
+     "payment-failed",
+     "printview",
+     "message",
+     "products",
+     "all-products",
+     "shop-by-category"
+    ],
+    "noindex_errors": true
+   },
+   "off": {
+    "enabled": false,
+    "hosts": [
+     "site-qa.fossdoc.com",
+     "fossdocqa.erp-crm.org"
+    ],
+    "base_url": "https://site-qa.fossdoc.com",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | FossDoc",
+    "site_name": "FossDoc",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps",
+     "cart",
+     "orders",
+     "invoices",
+     "quotations",
+     "shipments",
+     "issues",
+     "addresses",
+     "wishlist",
+     "wayforpay_checkout",
+     "wayforpay_result",
+     "payment-success",
+     "payment-failed",
+     "printview",
+     "message",
+     "products",
+     "all-products",
+     "shop-by-category"
+    ],
+    "noindex_errors": true
+   }
+  },
+  "fossdocprod.erp-crm.org": {
+   "on": {
+    "enabled": true,
+    "hosts": [
+     "www.fossdoc.com",
+     "fossdoc.com",
+     "fossdocprod.erp-crm.org"
+    ],
+    "base_url": "https://www.fossdoc.com",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | FossDoc",
+    "site_name": "FossDoc",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps",
+     "cart",
+     "orders",
+     "invoices",
+     "quotations",
+     "shipments",
+     "issues",
+     "addresses",
+     "wishlist",
+     "wayforpay_checkout",
+     "wayforpay_result",
+     "payment-success",
+     "payment-failed",
+     "printview",
+     "message",
+     "products",
+     "all-products",
+     "shop-by-category"
+    ],
+    "noindex_errors": true
+   },
+   "off": {
+    "enabled": false,
+    "hosts": [
+     "www.fossdoc.com",
+     "fossdoc.com",
+     "fossdocprod.erp-crm.org"
+    ],
+    "base_url": "https://www.fossdoc.com",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | FossDoc",
+    "site_name": "FossDoc",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps",
+     "cart",
+     "orders",
+     "invoices",
+     "quotations",
+     "shipments",
+     "issues",
+     "addresses",
+     "wishlist",
+     "wayforpay_checkout",
+     "wayforpay_result",
+     "payment-success",
+     "payment-failed",
+     "printview",
+     "message",
+     "products",
+     "all-products",
+     "shop-by-category"
+    ],
+    "noindex_errors": true
+   }
+  },
+  "erpfoss.erp-crm.org": {
+   "on": {
+    "enabled": true,
+    "hosts": [
+     "erp.foss.ua",
+     "www.erp.foss.ua",
+     "erpfoss.erp-crm.org"
+    ],
+    "base_url": "https://erp.foss.ua",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | ERP FOSS",
+    "site_name": "ERP FOSS",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps"
+    ],
+    "noindex_errors": true
+   },
+   "off": {
+    "enabled": false,
+    "hosts": [
+     "erp.foss.ua",
+     "www.erp.foss.ua",
+     "erpfoss.erp-crm.org"
+    ],
+    "base_url": "https://erp.foss.ua",
+    "spaces": {
+     "docs": "uk",
+     "ru/docs": "ru",
+     "en/docs": "en"
+    },
+    "x_default": "uk",
+    "title_suffix": " | ERP FOSS",
+    "site_name": "ERP FOSS",
+    "noindex_paths": [
+     "login",
+     "update-password",
+     "unsubscribe",
+     "me",
+     "update-profile",
+     "third_party_apps"
+    ],
+    "noindex_errors": true
+   }
+  }
+ }
+}

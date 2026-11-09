@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="frappe">
+
+	
+	<meta name="title" content="Зміна локалізації СЕД"><meta name="description" content="Як змінити мову локалізації сервера СЕД FossDoc за допомогою консолі адміністрування."><meta name="image" content="https://www.fossdoc.com/files/fossdoc-share-uk.png"><meta property="og:image:width"  content="1200"><meta property="og:image:height"  content="630"><meta name="language" content="uk"><meta property="og:type"  content="article"><meta property="og:title"  content="Зміна локалізації СЕД"><meta property="og:description"  content="Як змінити мову локалізації сервера СЕД FossDoc за допомогою консолі адміністрування."><meta property="og:image"  content="https://www.fossdoc.com/files/fossdoc-share-uk.png"><meta name="twitter:title" content="Зміна локалізації СЕД"><meta name="twitter:description" content="Як змінити мову локалізації сервера СЕД FossDoc за допомогою консолі адміністрування."><meta name="twitter:image" content="https://www.fossdoc.com/files/fossdoc-share-uk.png"><meta name="twitter:card" content="summary_large_image">
+	
+
+	<title>Зміна локалізації СЕД</title>
+
+	
+	<link rel="shortcut icon" href="/files/fossdoc-favicon.svg"
+		type="image/x-icon">
+	
+
+	<link rel="canonical" href="https://www.fossdoc.com/docs/howto-change-localization"><script>(function(){if(document.querySelector('meta[name="robots"]'))return;var t=document.querySelector('meta[name="title"]');if(!new RegExp("^/(login|update\\-password|unsubscribe|me|update\\-profile|third_party_apps|cart|orders|invoices|quotations|shipments|issues|addresses|wishlist|wayforpay_checkout|wayforpay_result|payment\\-success|payment\\-failed|printview|message|products|all\\-products|shop\\-by\\-category)(/|$)").test(location.pathname)&&!(t&&["404", "Error"].indexOf(t.getAttribute('content'))>=0))return;var m=document.createElement('meta');m.name='robots';m.content='noindex, nofollow';document.head.appendChild(m);})();</script><style>.fd-shell .wrap{width:100%;max-width:1264px;margin:0 auto;padding:0 32px}.fd-shell .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}.fd-shell .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:38px}.fd-shell .lang{display:flex;gap:2px}.fd-shell .lang a{padding:3px 8px;border-radius:6px;font-weight:600}.fd-shell .lang .on{background:#292524;color:#ffffff}.fd-shell .hdr{position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #e7e2dc}.fd-shell .hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}.fd-shell .logo{display:flex;align-items:center;gap:12px}.fd-shell .logo-name{font-size:20px;font-weight:800;letter-spacing:-0.01em;color:#1c1917;line-height:1.1}.fd-shell .logo-sub{font-size:11.5px;color:#78716c;margin-top:3px;line-height:1.2}.fd-shell .nav{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500;color:#44403c}.fd-shell .nav a:hover{color:#d9381e}.fd-shell .nav .cur{color:#d9381e}.fd-shell .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#d9381e;color:#ffffff;font-size:15px;font-weight:700;line-height:1.2;padding:13px 22px;border-radius:10px;border:1px solid #d9381e;white-space:nowrap}.fd-shell .btn:hover{background:#b32b14;border-color:#b32b14}.fd-shell .btn-ghost{background:#ffffff;color:#1c1917;border:1px solid #e7e2dc}.fd-shell .btn-ghost:hover{background:#faf7f3;border-color:#d6d3d1}.fd-shell .burger{display:none}.fd-shell .burger summary{list-style:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #e7e2dc;border-radius:10px;cursor:pointer;color:#1c1917}.fd-shell .burger summary::-webkit-details-marker{display:none}.fd-shell .burger[open] summary{background:#fdeeea;border-color:#ef9f90;color:#d9381e}.fd-shell .menu{position:absolute;left:0;right:0;top:100%;background:#ffffff;border-bottom:1px solid #e7e2dc;box-shadow:0 16px 32px -12px rgba(28,25,23,.18);padding:8px 20px 24px}.fd-shell .menu a.mi{display:flex;align-items:center;justify-content:space-between;padding:15px 4px;border-bottom:1px solid #e7e2dc;font-size:17px;font-weight:600;color:#1c1917}.fd-shell .menu-foot{display:flex;flex-direction:column;gap:16px;padding-top:20px}.fd-shell .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;padding-top:84px;padding-bottom:84px}.fd-shell .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}.fd-shell .cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-top:72px;padding-bottom:72px}.fd-shell .ft{background:#1c1917;color:#d6d3d1}.fd-shell .ft-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-top:64px;padding-bottom:48px}.fd-shell .ft-about{font-size:14.5px;color:#a8a29e;line-height:1.6;margin-top:18px;max-width:340px}.fd-shell .ft-h{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#ef9f90;margin-bottom:16px}.fd-shell .ft-l{display:flex;flex-direction:column;gap:10px;font-size:14.5px}.fd-shell .ft-l a:hover{color:#ffffff}.fd-shell .ft-l a span{color:#a8a29e;font-size:12px;margin-left:4px}.fd-shell .ft-bot{border-top:1px solid #292524}.fd-shell .ft-bot .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:22px;padding-bottom:22px;font-size:13px;color:#a8a29e;flex-wrap:wrap}@media (max-width:900px){.fd-shell .wrap{padding:0 24px}.fd-shell .nav,.fd-shell .hdr .btn-hdr{display:none}.fd-shell .burger{display:block}.fd-shell .hdr .wrap{height:68px}.fd-shell .topbar .wrap{justify-content:flex-end}.fd-shell .hero .wrap{grid-template-columns:1fr;gap:44px;padding-top:64px;padding-bottom:64px}.fd-shell .facts .wrap{grid-template-columns:1fr 1fr}.fd-shell .cta .wrap{flex-direction:column;align-items:flex-start;gap:28px;padding-top:56px;padding-bottom:56px}.fd-shell .ft-top{grid-template-columns:1fr 1fr;gap:32px}.fd-shell .ft-brand{grid-column:1 / -1}}@media (max-width:640px){.fd-shell .wrap{padding:0 20px}.fd-shell .hdr .wrap{height:64px}.fd-shell .logo-sub{display:none}.fd-shell .hero .wrap{padding-top:44px;padding-bottom:48px;gap:36px}.fd-shell .actions .btn{width:100%;padding:15px 22px}.fd-shell .facts .wrap{grid-template-columns:1fr}.fd-shell .cta .btn{width:100%}.fd-shell .form-f .btn{width:100%}.fd-shell .ft-top{grid-template-columns:1fr 1fr;gap:28px 20px;padding-top:48px}.fd-shell .ft-bot .wrap{flex-direction:column;align-items:flex-start;gap:8px}}.fd-shell .fd-summary .btn{width:100%}.fd-shell .hero .wrap > .fd-shot{width:100%;height:auto;border-radius:14px;border:1px solid #e7e2dc;box-shadow:0 24px 48px -28px rgba(28,25,23,.35);background:#fff}.fd-shell .ft-top{display:grid}.fd-shell .fd-feat-n .mono{font-size:12.5px;font-weight:700;color:#d9381e}.fd-shell .lang{position:relative;font-size:13px;font-weight:600}.fd-shell .lang summary{list-style:none;display:flex;align-items:center;gap:4px;padding:6px 10px;border-radius:8px;cursor:pointer;color:#44403c}.fd-shell .lang summary::-webkit-details-marker{display:none}.fd-shell .lang summary svg{transform:rotate(90deg);transition:transform .15s}.fd-shell .lang summary:hover,.fd-shell .lang[open] summary{background:#fdecea;color:#d9381e}.fd-shell .lang[open] summary svg{transform:rotate(-90deg)}.fd-shell .lang ul{list-style:none;margin:0;padding:6px;position:absolute;top:calc(100% + 6px);right:0;min-width:84px;background:#fff;border:1px solid #e7e0d8;border-radius:10px;box-shadow:0 12px 28px -12px rgba(28,25,23,.35);z-index:50}.fd-shell .lang li{margin:0;padding:0}.fd-shell .lang li a{display:block;padding:8px 12px;border-radius:6px;color:#44403c}.fd-shell .lang li a:hover{background:#f5f5f4}.fd-shell .lang li a.cur{background:#fdecea;color:#d9381e}.fd-shell .menu .lang{padding:12px 4px}.fd-shell .menu .lang ul{position:static;box-shadow:none;margin-top:6px}@media(max-width:1180px){.fd-shell .nav{gap:18px;font-size:14.5px}.fd-shell .logo-sub{display:none}.fd-shell .btn-hdr{padding:10px 16px}}.fd-shell .fd-acc{display:flex;align-items:center;gap:16px;font-size:15px;font-weight:600;color:#44403c;white-space:nowrap}.fd-shell .fd-acc[hidden]{display:none}.fd-shell .fd-acc a:hover{color:#d9381e}.fd-shell .fd-cart b{display:inline-block;min-width:20px;padding:1px 6px;margin-left:4px;border-radius:10px;background:#d9381e;color:#fff;font-size:12px;text-align:center}.fd-shell .fd-cart b:empty{display:none}.fd-shell .menu .fd-acc-m{display:flex;flex-direction:column;align-items:stretch;gap:0;margin-bottom:12px}.fd-shell .menu .fd-acc-m[hidden]{display:none}.fd-shell .menu .fd-acc-m a{padding:12px 4px;border-bottom:1px solid #e7e2dc;font-size:17px}@media(max-width:1180px){.fd-shell .nav,.fd-shell .hdr .btn-hdr,.fd-shell .hdr .wrap>.fd-acc{display:none}.fd-shell .burger{display:block}}.fd-shell .fd-mail .btn{width:100%}.fd-shell .fd-topup .btn{align-self:flex-start}.fd-shell .fd-pay-card .btn{align-self:flex-start}.fd-shell .hdr,.fd-shell .hdr *,.fd-shell .ft,.fd-shell .ft *{box-sizing:border-box}.fd-shell .hdr,.fd-shell .ft{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;font-size:16px}.fd-shell .hdr a,.fd-shell .ft a{color:inherit;text-decoration:none}.fd-shell .hdr p,.fd-shell .ft p{margin:0}.fd-shell .hdr .nav{white-space:nowrap;gap:22px;flex-wrap:nowrap;padding:0;margin:0}.fd-shell .hdr .nav a{padding:0}.fd-shell .hdr .logo{flex-shrink:0}.fd-shell .hdr .logo-sub{display:none}.fd-shell .hdr .wrap{gap:18px}.fd-shell .hdr .nav{gap:18px;font-size:14.5px}.fd-shell .hdr .btn-hdr{padding:10px 16px;font-size:14px}.fd-shell .hdr .nav a:hover{color:#4f46e5}.fd-shell .hdr .btn-hdr{white-space:nowrap;color:#fff}.fd-shell .hdr .btn-hdr:hover{color:#fff}.fd-shell .ft a:hover{color:#fff}.fd-cart-mail{margin:12px 0 0}.fd-cart-mail .btn{width:100%;border-radius:10px;padding:9px 12px}.fd-cart-status{margin:8px 0 0;font-size:13px;color:#57534e}.fd-steps{display:flex;gap:8px;list-style:none;margin:0 0 8px;padding:0}.fd-steps li{flex:1;display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #e7e5e4;border-radius:10px;color:#78716c;background:#fff}.fd-steps li b{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#e7e5e4;color:#57534e;font-size:13px}.fd-steps li.done{color:#292524}.fd-steps li.done b{background:#d9381e;color:#fff}.fd-steps li.current{border-color:#d9381e;color:#292524;font-weight:600}.fd-steps li.current b{background:#fff;border:2px solid #d9381e;color:#d9381e}.fd-steps-hint{margin:0 0 14px;font-size:14px;color:#b32b14}.btn-place-order.fd-wait{opacity:.55}@media(max-width:640px){.fd-steps{flex-direction:column}.cart-container .frappe-card.p-5{padding:1rem!important}.cart-container .col-md-8,.cart-container .col-md-4{padding-left:0;padding-right:0}.cart-container .cart-table{width:100%}.cart-container .cart-table td,.cart-container .cart-table th{padding:.5rem .25rem}.cart-container .cart-item-image{display:none}.cart-container .cart-table td:first-child{width:auto!important}.cart-container .number-spinner{flex-wrap:nowrap;max-width:100%}.cart-container .cart-qty{max-width:44px!important;padding:.25rem}.cart-container .cart-btn{padding:.25rem .5rem}.cart-container .frappe-card{overflow-x:auto}}</style><script>(function(){var d=document,r=d.documentElement,s=d.createElement('style');s.textContent='html[data-fd=in] [data-fd-acc=guest],html[data-fd=out] [data-fd-acc=user]{display:none}';d.head.appendChild(s);function get(n){var m=new RegExp('(?:^|; *)'+n+'=([^;]*)').exec(d.cookie);return m?m[1]:'';}function apply(){var u=get('user_id'),on=!!u&&u!=='Guest',c=get('cart_count');r.setAttribute('data-fd',on?'in':'out');Array.prototype.forEach.call(d.querySelectorAll('[data-fd-acc]'),function(e){e.hidden=(e.getAttribute('data-fd-acc')==='user')===!on;});Array.prototype.forEach.call(d.querySelectorAll('.fd-cart b'),function(b){b.textContent=/^[1-9]\d*$/.test(c)?c:'';});}apply();d.addEventListener('DOMContentLoaded',apply);addEventListener('pageshow',function(e){if(e.persisted){apply();}});})();</script><script>(function () {
+	// the shop head and a page may both carry it: wrap fetch once
+	if (window.fossdocCaptcha) { return; }
+	window.fossdocCaptcha = true;
+	var original = window.fetch;
+	var actions = {
+		'fossdoc_shop.api.send_calculation': 'calculation',
+		'fossdoc_shop.downloads.request_download': 'download'
+	};
+	var WAIT = 8000;
+	var ready = null;
+	var scripted = null;
+	// a step that hangs (the script of Google blocked, no network) gives an empty token, so the form is never stuck
+	function limited(promise) {
+		return Promise.race([promise, new Promise(function (resolve) { setTimeout(function () { resolve(''); }, WAIT); })]);
+	}
+	function script(key) {
+		if (!scripted) {
+			scripted = new Promise(function (resolve) {
+				var tag = document.createElement('script');
+				tag.src = 'https://www.google.com/recaptcha/api.js?render=' + encodeURIComponent(key);
+				tag.onload = function () { window.grecaptcha.ready(function () { resolve(key); }); };
+				tag.onerror = function () { scripted = null; resolve(''); };
+				document.head.appendChild(tag);
+			});
+		}
+		return scripted;
+	}
+	function loaded() {
+		if (!ready) {
+			ready = limited(original('/api/method/fossdoc_shop.api.recaptcha_site_key', {credentials: 'same-origin', headers: {'Accept': 'application/json'}})
+				.then(function (r) { return r.json(); })
+				.then(function (d) { return (d.message && d.message.site_key) || ''; })
+				.then(function (key) { return key ? script(key) : ''; })
+				.catch(function () { return ''; }))
+				.then(function (key) {
+					if (!key) { ready = null; }  // a failure is not remembered: the next post tries again
+					return key;
+				});
+		}
+		return ready;
+	}
+	function token(action) {
+		return limited(loaded().then(function (key) {
+			return key ? window.grecaptcha.execute(key, {action: action}) : '';
+		}).catch(function () { return ''; }));
+	}
+	window.fetch = function (url, options) {
+		var found = typeof url === 'string' && /\/api\/method\/([\w.]+)/.exec(url);
+		var action = found && actions[found[1]];
+		if (!action || !options || !options.body) {
+			return original.apply(this, arguments);
+		}
+		var self = this;
+		return token(action).then(function (value) {
+			var body = options.body;
+			if (value && body instanceof URLSearchParams) {
+				body.set('recaptcha_token', value);
+			} else if (value && typeof body === 'string') {
+				try { var json = JSON.parse(body); json.recaptcha_token = value; body = JSON.stringify(json); } catch (e) {}
+			}
+			return original.call(self, url, Object.assign({}, options, {body: body}));
+		});
+	};
+})();
+</script><script>(function () {
+	var allLabels = {"uk": {"button": "Надіслати кошик на пошту", "sending": "Надсилаємо…", "sent": "Кошик надіслано на вашу пошту.", "error": "Не вдалося надіслати. Спробуйте ще раз.", "empty": "У кошику немає позицій.", "steps": ["Кошик", "Реквізити платника", "Оплата"], "needAddress": "Вкажіть реквізити платника, щоб оформити замовлення: рахунок і квитанція виписуються на них."}, "ru": {"button": "Отправить корзину на почту", "sending": "Отправляем…", "sent": "Корзина отправлена на вашу почту.", "error": "Не удалось отправить. Попробуйте ещё раз.", "empty": "В корзине нет позиций.", "steps": ["Корзина", "Реквизиты плательщика", "Оплата"], "needAddress": "Укажите реквизиты плательщика, чтобы оформить заказ: счёт и квитанция выписываются на них."}, "en": {"button": "Send the cart by e-mail", "sending": "Sending…", "sent": "The cart was sent to your e-mail.", "error": "Could not send. Please try again.", "empty": "The cart has no items.", "steps": ["Cart", "Payer details", "Payment"], "needAddress": "Enter the payer details to place the order: the invoice and the receipt are made out to them."}};
+	var allDialogs = {"uk": {"New Address": "Нова адреса", "Address Title": "Назва платника (особа або компанія)", "Address Type": "Тип адреси", "Address Line 1": "Адреса, рядок 1", "Address Line 2": "Адреса, рядок 2", "City/Town": "Місто", "State": "Область", "Country": "Країна", "Postal Code": "Поштовий індекс", "Phone": "Телефон", "Save": "Зберегти", "Billing": "Для рахунку", "Shipping": "Для доставки", "Other": "Інше", "Office": "Офіс"}, "ru": {"New Address": "Новый адрес", "Address Title": "Название плательщика (лицо или компания)", "Address Type": "Тип адреса", "Address Line 1": "Адрес, строка 1", "Address Line 2": "Адрес, строка 2", "City/Town": "Город", "State": "Область", "Country": "Страна", "Postal Code": "Почтовый индекс", "Phone": "Телефон", "Save": "Сохранить", "Billing": "Для счёта", "Shipping": "Для доставки", "Other": "Другое", "Office": "Офис"}, "en": {"Address Title": "Payer name (person or company)"}};
+	var marker = "Розрахунок вартості FossDoc";
+	var countries = {"priority": ["Ukraine", "Kazakhstan", "Uzbekistan", "Lithuania", "Latvia", "Estonia", "Moldova, Republic of", "Poland", "Georgia", "Armenia", "Azerbaijan"], "defaultCountry": "Ukraine", "files": {"uk": "/files/fossdoc-countries-uk.json", "ru": "/files/fossdoc-countries-ru.json", "en": "/files/fossdoc-countries-en.json"}};
+	// the language of the page: Frappe puts the language of the visitor into the lang of the page
+	var lang = (document.documentElement.lang || 'uk').slice(0, 2).toLowerCase();
+	if (!allLabels[lang]) { lang = 'uk'; }
+	var labels = allLabels[lang];
+	var dialog = allDialogs[lang] || {};
+	var endpoint = '/api/method/fossdoc_shop.api.send_calculation';
+	function money(value) { return Math.round(Number(value || 0) * 100) / 100; }
+	function cartMessage(doc) {
+		var lines = (doc.items || []).map(function (row) {
+			return {code: row.item_code, name: row.item_name || row.item_code, qty: Math.round(row.qty) || 1,
+				unit: row.rate || 0, total: row.amount || 0};
+		});
+		var words = lines.map(function (line) {
+			return line.name + (line.qty > 1 ? ' (' + line.qty + ' × ' + money(line.unit) + ')' : '') + ': ' + money(line.total);
+		});
+		var payload = {lang: lang, kind: 'cart', total: doc.grand_total || doc.net_total || 0, perMonth: false, lines: lines};
+		return marker + '\n' + JSON.stringify(payload) + '\n\n' + words.join('\n');
+	}
+	function send(button, status) {
+		status.textContent = labels.sending;
+		button.disabled = true;
+		// frappe.call gives a jQuery promise: wrap it to get the methods of a native one
+		Promise.resolve(frappe.call({method: 'webshop.webshop.shopping_cart.cart.get_cart_quotation'})).then(function (response) {
+			var doc = response.message && response.message.doc;
+			if (!doc || !(doc.items || []).length) {
+				throw new Error('empty');
+			}
+			var body = new URLSearchParams({sender: frappe.session.user, message: cartMessage(doc)});
+			return fetch(endpoint, {method: 'POST', body: body, headers: {'X-Frappe-CSRF-Token': frappe.csrf_token}});
+		}).then(function (response) {
+			if (!response.ok) { throw new Error(response.status); }
+			status.textContent = labels.sent;
+		}).catch(function (error) {
+			status.textContent = error && error.message === 'empty' ? labels.empty : labels.error;
+		}).then(function () { button.disabled = false; });
+	}
+	function mount() {
+		if (location.pathname !== '/cart' || document.getElementById('fd-cart-mail')) { return; }
+		// under the button that places the order (or asks for the quote)
+		var action = document.querySelector('.btn-place-order, .btn-request-for-quotation');
+		var anchor = action && action.closest('.card');
+		if (!anchor) { return; }
+		var box = document.createElement('div');
+		box.id = 'fd-cart-mail';
+		box.className = 'fd-cart-mail';
+		box.innerHTML = '<button type="button" class="btn btn-default btn-sm">' + labels.button + '</button>' +
+			'<p class="fd-cart-status" role="status"></p>';
+		anchor.parentNode.insertBefore(box, anchor.nextSibling);
+		box.querySelector('button').addEventListener('click', function () {
+			send(this, box.querySelector('.fd-cart-status'));
+		});
+	}
+	// The order needs an address of the payer (Webshop refuses it without one): it is a step of the checkout.
+	function hasAddress() { return document.querySelectorAll('.address-container[data-active]').length > 0; }
+	function steps() {
+		var head = document.querySelector('.shopping-cart-header');
+		if (location.pathname !== '/cart' || !head) { return; }
+		var bar = document.getElementById('fd-steps');
+		if (!bar) {
+			bar = document.createElement('div');
+			bar.id = 'fd-steps';
+			bar.innerHTML = '<ol class="fd-steps">' + labels.steps.map(function (name, i) {
+				return '<li data-step="' + (i + 1) + '"><b>' + (i + 1) + '</b><span>' + name + '</span></li>';
+			}).join('') + '</ol><p class="fd-steps-hint" role="status"></p>';
+			head.parentNode.insertBefore(bar, head.nextSibling);
+		}
+		var ready = hasAddress();
+		var items = bar.querySelectorAll('li');
+		items[0].className = 'done';
+		items[1].className = ready ? 'done' : 'current';
+		items[2].className = ready ? 'current' : '';
+		var hint = bar.querySelector('.fd-steps-hint');
+		var text = ready ? '' : labels.needAddress;
+		// only a change is written: a write is a mutation that the observer below would answer again
+		if (hint.textContent !== text) { hint.textContent = text; }
+		var place = document.querySelector('.btn-place-order');
+		if (place) { place.classList.toggle('fd-wait', !ready); }
+	}
+	var opened = false;
+	function firstVisit() {
+		// the first time the cart is opened without any address the window of the address opens by itself
+		if (opened || location.pathname !== '/cart' || hasAddress() || document.querySelector('.address-container')) { return; }
+		var add = document.querySelector('.btn-new-address');
+		if (add) { opened = true; add.click(); }
+	}
+	document.addEventListener('click', function (event) {
+		var place = event.target.closest && event.target.closest('.btn-place-order');
+		if (!place || hasAddress()) { return; }
+		event.stopPropagation();
+		event.preventDefault();
+		var add = document.querySelector('.btn-new-address');
+		if (add) { add.click(); }
+	}, true);
+	function translateDialog() {
+		var nodes = document.querySelectorAll('.modal label, .modal .control-label, .modal .modal-title, .modal .btn-primary, .modal option');
+		nodes.forEach(function (node) {
+			// a text of the window only (a node with children is left alone), and only a change is written
+			if (node.children.length && node.tagName !== 'LABEL') { return; }
+			var text = (node.textContent || '').replace(/\s*\*\s*$/, '').trim();
+			var star = /\*\s*$/.test(node.textContent || '') ? ' *' : '';
+			if (dialog[text] && node.textContent !== dialog[text] + star) {
+				node.textContent = dialog[text] + star;
+			}
+		});
+	}
+	// The Country field of the window is a Link control that asks the server for ten countries ordered by how often they
+	// were used, in English. For this one control the list is replaced by the whole list of the shop: the countries of
+	// the buyers first, then the others in the alphabet of the page, with the names in the language of the page (a
+	// public file, fetched on /cart); the stored value stays the English name of the Country record. The window also
+	// opens with Ukraine and "Billing". Whatever fails, the window stays the stock one.
+	var countryNames = null;
+	function loadCountryNames() {
+		if (!countryNames) {
+			var url = countries.files[lang];
+			countryNames = url ? fetch(url).then(function (response) {
+				if (!response.ok) { throw new Error(response.status); }
+				return response.json();
+			}) : Promise.resolve(null);
+		}
+		return countryNames;
+	}
+	function countryItems(names) {
+		var first = countries.priority;
+		var rest = Object.keys(names).filter(function (name) { return first.indexOf(name) < 0; });
+		rest.sort(function (a, b) { return names[a].localeCompare(names[b], lang); });
+		return first.concat(rest).map(function (name) { return {value: name, label: names[name] || name}; });
+	}
+	function applyCountries(control, names) {
+		var items = countryItems(names);
+		var known = control.get_translated;
+		control.get_translated = function (value) { return names[value] || known.call(control, value); };
+		control.merge_duplicates = function () { return items; };
+		control.title_value_map = control.title_value_map || {};
+		items.forEach(function (item) { control.title_value_map[item.label] = item.value; });
+		control.awesomplete.maxItems = items.length;
+		control.awesomplete.filter = function (item, input) {
+			var text = String(input || '').trim().toLowerCase();
+			var label = String(item.label || '').toLowerCase();
+			var value = String(item.value || '').toLowerCase();
+			// a country that is already chosen does not narrow the list to itself
+			return !text || control.title_value_map[input] !== undefined || label.indexOf(text) >= 0 || value.indexOf(text) >= 0;
+		};
+		control.awesomplete.list = items;
+		// the name in the input: a default set before the names came shows the English one
+		var chosen = control.get_input_value && control.get_input_value();
+		if (chosen && names[chosen] && control.set_input_value) { control.set_input_value(names[chosen]); }
+	}
+	// A closed dialog keeps its modal in the page: a modal is handled once, and one that never gets its dialog is given up.
+	function countryModal() {
+		var nodes = document.querySelectorAll('.modal [data-fieldname="country"]');
+		for (var i = 0; i < nodes.length; i++) {
+			var modal = nodes[i].closest('.modal');
+			if (modal && !modal.getAttribute('data-fd-country') && !modal.fdWaiting) { return modal; }
+		}
+		return null;
+	}
+	function setupCountry(modal, tries) {
+		modal.fdWaiting = true;
+		var dlg = window.cur_dialog;
+		var fields = dlg && dlg.fields_dict;
+		var control = fields && fields.country;
+		// the dialog is the current one only when Bootstrap has shown it: it must be the one of this modal
+		var mine = control && control.$input && control.$input[0] && control.$input[0].closest('.modal') === modal;
+		if (!mine || !fields.address_title || !fields.address_line1 || !control.awesomplete) {
+			if (tries > 0) { setTimeout(function () { setupCountry(modal, tries - 1); }, 150); }
+			else { modal.setAttribute('data-fd-country', 'skip'); }
+			return;
+		}
+		modal.setAttribute('data-fd-country', '1');
+		try {
+			if (!dlg.get_value('country')) { dlg.set_value('country', countries.defaultCountry); }
+			if (fields.address_type && !dlg.get_value('address_type')) { dlg.set_value('address_type', 'Billing'); }
+			loadCountryNames().then(function (names) {
+				if (names) { applyCountries(control, names); }
+			}).catch(function (error) {
+				if (window.console) { console.warn('fossdoc: the names of the countries were not loaded', error); }
+			});
+		} catch (error) {
+			if (window.console) { console.warn('fossdoc: the list of countries was not set', error); }
+		}
+	}
+	function watchCountry() {
+		if (location.pathname !== '/cart') { return; }
+		var modal = countryModal();
+		if (modal) {
+			loadCountryNames().catch(function () {});
+			setupCountry(modal, 20);
+		}
+	}
+	function start() {
+		mount();
+		steps();
+		// Webshop binds its buttons when the page is ready: wait for it before the window is opened
+		setTimeout(firstVisit, 1500);
+		new MutationObserver(function () {
+			mount(); steps(); translateDialog();
+			watchCountry();
+		}).observe(document.body, {childList: true, subtree: true});
+	}
+	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', start); } else { start(); }
+})();
+</script><script>(function () {
+	var allTexts = {"uk": {"Search": "Пошук", "Prev": "Назад", "Next": "Далі", "You must be logged in to use this form.": "Щоб користуватися цією формою, увійдіть в обліковий запис.", "Edit Sidebar": "Редагувати меню", "Edit Page": "Редагувати сторінку", "On this page": "На цій сторінці", "Previous Page": "Попередня сторінка", "Next Page": "Наступна сторінка", "FossDoc Modules": "Модулі FossDoc", "FossDoc Databases": "Бази даних FossDoc", "FossDoc E-signature": "Електронний підпис FossDoc", "FossDoc Services": "Послуги FossDoc", "FossDoc Seats": "Робочі місця FossDoc", "FossDoc": "FossDoc"}, "ru": {"Search": "Поиск", "Prev": "Назад", "Next": "Далее", "You must be logged in to use this form.": "Чтобы пользоваться этой формой, войдите в учётную запись.", "Edit Sidebar": "Редактировать меню", "Edit Page": "Редактировать страницу", "On this page": "На этой странице", "Previous Page": "Предыдущая страница", "Next Page": "Следующая страница", "FossDoc Modules": "Модули FossDoc", "FossDoc Databases": "Базы данных FossDoc", "FossDoc E-signature": "Электронная подпись FossDoc", "FossDoc Services": "Услуги FossDoc", "FossDoc Seats": "Рабочие места FossDoc", "FossDoc": "FossDoc", "QR коди": "QR коды", "Індивідуальна розробка": "Индивидуальная разработка", "Інтеграція \"Вчасно\"": "Интеграция \"Вчасно\"", "Інтеграція \"ПТАХ\"": "Интеграция \"ПТАХ\"", "Інтеграція СЕВ": "Интеграция СЕВ", "Інтернет пошта": "Интернет-почта", "Історія": "История", "Автоматизує роботу помічників співробітників, як прийнято у діловодстві.": "Автоматизирует работу помощников сотрудников так, как это принято в делопроизводстве.", "Архівний сервер": "Архивный сервер", "Аутентифікація та ЕЦП за технологією Mobile ID.": "Аутентификация и ЭЦП с помощью технологии Mobile ID.", "Веде статистику роботи з документом.": "Ведет статистику работы с документом.", "Впровадження й навчання": "Внедрение и обучение", "Даний модуль призначено для організації чату за документом.": "Данный модуль предназначен для организации чата по документу.", "Для публікації документів на web сайті (порталі) та обробки документів, отриманих з порталу.": "Данный модуль предназначен для публикации документов из системы электронного документооборота FossDoc на web сайте заказчика (портале).", "Дозволяє авторизуватися в системі документообігу, використовуючи механізм авторизації домену Windows.": "Позволяет авторизоваться в системе документооборота используя механизм авторизации домена Windows.", "Дозволяє використовувати арифметичні операції під час роботи з полями документів.": "Позволяет использовать арифметические операции во время работы с полями документов.", "Дозволяє зафіксувати факт передачі паперових оригіналів або копій документів до справи.": "Позволяет зафиксировать факт передачи бумажных оригиналов или копий документов в дело.", "Дозволяє зберігати всі доручення, проекти документів, самі документи і довідники в єдиній базі даних.": "Позволяет хранить все поручения, проекты документов, сами документы и справочники в единой базе данных.", "Дозволяє приймати та відправляти документи між різними державними установами України.": "Позволяет принимать и отправлять документы между разными гос.организациями.", "Дозволяє підготувати резолюції до документа, як помічнику керівника, так і самому керівнику.": "Позволяет подготовить резолюции к документу, как помощнику руководителя, так и самому руководителю.", "Доменна авторизація": "Доменная авторизация", "Забезпечує документообіг службових записок: створення службової та її реєстрацію, відправку по маршруту і т.п.": "Обеспечивает документооборот служебных записок: создание служебной и ее регистрацию, отправку по маршруту и ​​т.п.", "Забезпечує звільнення БД від старих документів та перенесення їх до архівного серверу": "Обеспечивает освобождение БД от старых документов й перенос их на архивный сервер", "Забезпечує обробку звернень громадян. Можна створити вихідний лист безпосередньо з картки \"Звернення громадян\".": "Обеспечивает обработку обращений граждан. Можно создать исходящего письма напрямую с карты \"Обращение граждан\".", "Звернення громадян": "Обращение граждан", "Зручний та безкоштовний ЕЦП провайдер": "Удобный и бесплатный провайдер ЭЦП", "Контроль документів": "Контроль документов", "Ліцензія ЕЦП на одного користувача": "Лицензия ЭЦП на одного пользователя", "Ліцензія на одного користувача": "Лицензия на одного пользователя", "Модуль Інтернет пошта реалізує функції поштового серверу Системи.": "Модуль Интернет почта реализует функции почтового сервера Системы.", "На замовлення": "По заказу", "Навчання": "Обучение", "Обговорення документів": "Обсуждение документов", "Обмін підписаними ЕЦП документами з вашими контрагентами через API ПТАХ": "Обмен подписанными ЭЦП документами с вашими контрагентами через API ПТАХ", "Обмін підписаними ЕЦП документами з вашими контрагентами через сервіс \"Вчасно\"": "Обмен подписанными ЭЦП документами с вашими контрагентами через сервис \"Вчасно\"", "Обчислювальні поля": "Вычисляемые поля", "Оплата послуг із впровадження та навчання: 1 одиниця = 1 у.о. (USD)": "Оплата услуг по внедрению и обучению: 1 единица = 1 у.е. (USD)", "Оплата технічної підтримки: 1 одиниця = 1 у.о. (USD)": "Оплата технической поддержки: 1 единица = 1 у.е. (USD)", "Оплата індивідуальної розробки: 1 одиниця = 1 у.о. (USD)": "Оплата индивидуальной разработки: 1 единица = 1 у.е. (USD)", "Оренда: користувач на місяць": "Аренда: пользователь в месяц", "Основний модуль, що забезпечує роботу системи, дозволяє створювати власні рішення та ін.": "Основной модуль, обеспечивающий работу системы, позволяет создавать собственные решения и др.", "Періодичні задачі": "Периодические задачи", "Повідомлення маршрутизації": "Уведомления маршрутизации", "Повідомлює на електронну пошту про зміни в маршрутах документів.": "Уведомляет по электронной почте об изменениях в маршрутах документов.", "Помічники співробітників": "Помощники сотрудников", "Починаючи з версії 6.0, до серверу FossDoc можна підключатися за допомогою звичайного веб-браузера.": "Начиная с версии 6.0, к серверу FossDoc можно подключаться с помощью обычного веб-браузера.", "Провайдер ЕЦП \"Інститут Інформаційних Технологій\"": "Провайдер ЭЦП \"Институт Информационных Технологий\"", "Провайдер ЕЦП Bitis. Рівень Г-2 ДСТСЗІ": "Провайдер ЭЦП Bitis. Уровень Г-2 ДСТСЗИ", "Проекти документів": "Проекты документов", "Протоколює всі дії над усіма об'єктами СЕД.": "Протоколирует все действия над всеми объектами СЭД.", "Протоколює зміни, що виконувалися користувачами над документами обраного типу.": "Протоколирует изменения, которые производились пользователями над документами выбранного типа.", "Підтримує налаштування та виконання періодичних завдань, як пов'язаних з документами, так і незалежних від них.": "Поддерживает настройку и исполнение периодических задач, как связанных с документами, так и независимых от них.", "Реалізує механізм контролю над виконанням користувачами завдань за документами.": "Реализует механизм контроля за соблюдением пользователями задач по документам.", "Реалізує механізм створення документа з його проекту, aбо на базі існуючого документу.": "Реализует механизм создания документа из его проекта или на базе существующего документа.", "Резолюції": "Резолюции", "Робоче місце ЕЦП": "Рабочее место ЭЦП", "Робоче місце користувача": "Рабочее место пользователя", "Розпізнавання": "Распознавание", "Система розпізнавання текстів": "Система распознавания текстов", "Службові записки": "Служебные записки", "Стан виконання документа": "Статус исполнения документа", "Стан виконання документа відображає поточного виконавця та загальний стан": "Статус исполнения документа отображает текущего исполнителя и общий статус", "Сховище": "Хранилище", "Технічна підтримка": "Техническая поддержка", "Технічна підтримка (рік)": "Техническая поддержка (год)", "Установка програмного забезпечення": "Установка программного обеспечения", "Формування документів з QR-кодами в колонтитулі": "Формирование документов с QR-кодами в колонтитуле", "Хмарний сервер, усі модулі, за користувача на місяць": "Облачный сервер, все модули, за пользователя в месяц"}, "en": {"QR коди": "QR codes", "Web-сервер": "Web server", "Індивідуальна розробка": "Custom development", "Інтеграція \"Вчасно\"": "Vchasno integration", "Інтеграція \"ПТАХ\"": "PTAKH integration", "Інтеграція СЕВ": "SEV integration", "Інтернет пошта": "Internet mail", "Історія": "History", "Автоматизує роботу помічників співробітників, як прийнято у діловодстві.": "It automates the work of the assistants of employees, as is usual in records management.", "Архівний сервер": "Archive server", "Аудит": "Audit", "Аутентифікація та ЕЦП за технологією Mobile ID.": "Authentication and digital signature with Mobile ID technology.", "Ваш провайдер": "Your provider", "Веб-портал": "Web portal", "Веде статистику роботи з документом.": "It keeps statistics of work with a document.", "Впровадження й навчання": "Implementation and training", "Даний модуль призначено для організації чату за документом.": "This module is for organising a chat about a document.", "Для публікації документів на web сайті (порталі) та обробки документів, отриманих з порталу.": "For publishing documents on a web site (portal) and processing documents received from the portal.", "Дозволяє авторизуватися в системі документообігу, використовуючи механізм авторизації домену Windows.": "It lets users log in to the document management system with the authorisation of a Windows domain.", "Дозволяє використовувати арифметичні операції під час роботи з полями документів.": "It allows arithmetic operations when working with document fields.", "Дозволяє зафіксувати факт передачі паперових оригіналів або копій документів до справи.": "It records the handing over of paper originals or copies of documents and their filing to a case file.", "Дозволяє зберігати всі доручення, проекти документів, самі документи і довідники в єдиній базі даних.": "It stores all tasks, draft documents, the documents themselves and reference books in a single database.", "Дозволяє приймати та відправляти документи між різними державними установами України.": "It lets different government bodies of Ukraine receive and send documents.", "Дозволяє підготувати резолюції до документа, як помічнику керівника, так і самому керівнику.": "It lets both the assistant of a manager and the manager prepare resolutions for a document.", "Доменна авторизація": "Domain authorisation", "Журнал": "Journal", "Забезпечує документообіг службових записок: створення службової та її реєстрацію, відправку по маршруту і т.п.": "It handles the flow of internal memos: creation and registration, sending along a route and so on.", "Забезпечує звільнення БД від старих документів та перенесення їх до архівного серверу": "It frees the database from old documents and moves them to the archive server.", "Забезпечує обробку звернень громадян. Можна створити вихідний лист безпосередньо з картки \"Звернення громадян\".": "It handles citizen appeals. A reply letter can be created directly from the \"Citizen appeals\" card.", "Звернення громадян": "Citizen appeal", "Зручний та безкоштовний ЕЦП провайдер": "A convenient and free digital signature provider", "Контроль документів": "Document control", "Ліцензія ЕЦП на одного користувача": "Digital signature licence per user", "Ліцензія на одного користувача": "Licence per user", "Модуль Інтернет пошта реалізує функції поштового серверу Системи.": "The Internet mail module implements the functions of the mail server of the system.", "На замовлення": "On request", "Навчання": "Training", "Обговорення документів": "Document discussions", "Обмін підписаними ЕЦП документами з вашими контрагентами через API ПТАХ": "Exchange of documents signed with a digital signature with your counterparties through the PTAKH API.", "Обмін підписаними ЕЦП документами з вашими контрагентами через сервіс \"Вчасно\"": "Exchange of documents signed with a digital signature with your counterparties through the Vchasno service.", "Обчислювальні поля": "Calculated fields", "Оплата послуг із впровадження та навчання: 1 одиниця = 1 у.о. (USD)": "Payment for implementation and training services: 1 unit = 1 USD", "Оплата технічної підтримки: 1 одиниця = 1 у.о. (USD)": "Payment for technical support: 1 unit = 1 USD", "Оплата індивідуальної розробки: 1 одиниця = 1 у.о. (USD)": "Payment for custom development: 1 unit = 1 USD", "Оренда: користувач на місяць": "Rental: user per month", "Основний модуль, що забезпечує роботу системи, дозволяє створювати власні рішення та ін.": "The main module that makes the system work; it lets you create your own solutions and more.", "Періодичні задачі": "Recurring tasks", "Платформа FossLook": "FossLook platform", "Повідомлення маршрутизації": "Routing notifications", "Повідомлює на електронну пошту про зміни в маршрутах документів.": "It sends e-mail notices about changes in document routes.", "Помічники співробітників": "Employee assistants", "Починаючи з версії 6.0, до серверу FossDoc можна підключатися за допомогою звичайного веб-браузера.": "Since version 6.0 you can connect to the FossDoc server with an ordinary web browser.", "Провайдер ЕЦП \"Інститут Інформаційних Технологій\"": "Digital signature provider \"Institute of Information Technologies\"", "Провайдер ЕЦП Bitis. Рівень Г-2 ДСТСЗІ": "Bitis digital signature provider. Level G-2 of the DSTSZI", "Проекти документів": "Draft documents", "Протоколює всі дії над усіма об'єктами СЕД.": "It logs all actions on all objects of the EDMS.", "Протоколює зміни, що виконувалися користувачами над документами обраного типу.": "It logs the changes that users made to documents of the chosen type.", "Підтримує налаштування та виконання періодичних завдань, як пов'язаних з документами, так і незалежних від них.": "It supports setting up and executing recurring tasks, both related to documents and independent of them.", "Реалізує механізм контролю над виконанням користувачами завдань за документами.": "It implements control over the execution of document tasks by the users.", "Реалізує механізм створення документа з його проекту, aбо на базі існуючого документу.": "It implements the creation of a document from its draft or from an existing document.", "Резолюції": "Resolutions", "Робоче місце ЕЦП": "Digital signature seat", "Робоче місце користувача": "User seat", "Розпізнавання": "Recognition", "Система розпізнавання текстів": "Text recognition system", "Службові записки": "Internal memos", "Стан виконання документа": "Execution status of a document", "Стан виконання документа відображає поточного виконавця та загальний стан": "The execution status shows the current performer and the overall state.", "Статистика": "Statistics", "Сховище": "Storage", "Технічна підтримка": "Technical support", "Технічна підтримка (рік)": "Technical support (a year)", "Установка програмного забезпечення": "Software installation", "Формування документів з QR-кодами в колонтитулі": "Creating documents with QR codes in the footer.", "Хмарний сервер, усі модулі, за користувача на місяць": "Cloud server, all modules, per user per month"}};
+	var allPatterns = {"uk": [["^(Разом \\()(\\d+)(?:\\.0)?(позицій\\))$", "$1$2 $3"], ["^(.*) \\| Item Code\\s*:\\s*(.*)$", "$1 | Код товару: $2"], ["^Item Code\\s*:\\s*(.*)$", "Код товару: $1"], ["^(?:a few seconds|just now)(?: ago)?$", "щойно"], ["^an? minute ago$", "хвилину тому"], ["^(\\d+) minutes? ago$", "$1 хв. тому"], ["^an? hour ago$", "годину тому"], ["^(\\d+) hours? ago$", "$1 год. тому"], ["^yesterday$", "вчора"], ["^an? day ago$", "день тому"], ["^(\\d+) days? ago$", "$1 дн. тому"], ["^an? week ago$", "тиждень тому"], ["^(\\d+) weeks? ago$", "$1 тиж. тому"], ["^an? month ago$", "місяць тому"], ["^(\\d+) months? ago$", "$1 міс. тому"], ["^an? year ago$", "рік тому"], ["^(\\d+) years? ago$", "$1 р. тому"], ["^last updated (?:a few seconds|just now)(?: ago)?$", "оновлено щойно"], ["^last updated an? minute ago$", "оновлено хвилину тому"], ["^last updated (\\d+) minutes? ago$", "оновлено $1 хв. тому"], ["^last updated an? hour ago$", "оновлено годину тому"], ["^last updated (\\d+) hours? ago$", "оновлено $1 год. тому"], ["^last updated yesterday$", "оновлено вчора"], ["^last updated an? day ago$", "оновлено день тому"], ["^last updated (\\d+) days? ago$", "оновлено $1 дн. тому"], ["^last updated an? week ago$", "оновлено тиждень тому"], ["^last updated (\\d+) weeks? ago$", "оновлено $1 тиж. тому"], ["^last updated an? month ago$", "оновлено місяць тому"], ["^last updated (\\d+) months? ago$", "оновлено $1 міс. тому"], ["^last updated an? year ago$", "оновлено рік тому"], ["^last updated (\\d+) years? ago$", "оновлено $1 р. тому"]], "ru": [["^(Итого \\()(\\d+)(?:\\.0)?(позиций\\))$", "$1$2 $3"], ["^(.*) \\| Item Code\\s*:\\s*(.*)$", "$1 | Код товара: $2"], ["^Item Code\\s*:\\s*(.*)$", "Код товара: $1"], ["^(?:a few seconds|just now)(?: ago)?$", "только что"], ["^an? minute ago$", "минуту назад"], ["^(\\d+) minutes? ago$", "$1 мин. назад"], ["^an? hour ago$", "час назад"], ["^(\\d+) hours? ago$", "$1 ч. назад"], ["^yesterday$", "вчера"], ["^an? day ago$", "день назад"], ["^(\\d+) days? ago$", "$1 дн. назад"], ["^an? week ago$", "неделю назад"], ["^(\\d+) weeks? ago$", "$1 нед. назад"], ["^an? month ago$", "месяц назад"], ["^(\\d+) months? ago$", "$1 мес. назад"], ["^an? year ago$", "год назад"], ["^(\\d+) years? ago$", "$1 г. назад"], ["^last updated (?:a few seconds|just now)(?: ago)?$", "обновлено только что"], ["^last updated an? minute ago$", "обновлено минуту назад"], ["^last updated (\\d+) minutes? ago$", "обновлено $1 мин. назад"], ["^last updated an? hour ago$", "обновлено час назад"], ["^last updated (\\d+) hours? ago$", "обновлено $1 ч. назад"], ["^last updated yesterday$", "обновлено вчера"], ["^last updated an? day ago$", "обновлено день назад"], ["^last updated (\\d+) days? ago$", "обновлено $1 дн. назад"], ["^last updated an? week ago$", "обновлено неделю назад"], ["^last updated (\\d+) weeks? ago$", "обновлено $1 нед. назад"], ["^last updated an? month ago$", "обновлено месяц назад"], ["^last updated (\\d+) months? ago$", "обновлено $1 мес. назад"], ["^last updated an? year ago$", "обновлено год назад"], ["^last updated (\\d+) years? ago$", "обновлено $1 г. назад"]], "en": [["^(Total \\()(\\d+)(?:\\.0)?(items\\))$", "$1$2 $3"]]};
+	function language() {
+		// the Wiki sets lang to en on its pages, but its texts are in the language of the folder: /docs is Ukrainian
+		if (/^\/ru\/docs(\/|$)/.test(location.pathname)) { return 'ru'; }
+		if (/^\/docs(\/|$)/.test(location.pathname)) { return 'uk'; }
+		return (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+	}
+	function translate(text, texts, patterns) {
+		var key = text.trim();
+		if (!key) { return text; }
+		var out = texts[key];
+		for (var i = 0; out === undefined && i < patterns.length; i++) {
+			if (patterns[i][0].test(key)) { out = key.replace(patterns[i][0], patterns[i][1]); }
+		}
+		return out === undefined ? text : text.replace(key, out);
+	}
+	function run(root) {
+		var lang = language();
+		var texts = allTexts[lang];
+		if (!texts) { return; }
+		var patterns = allPatterns[lang].map(function (row) { return [new RegExp(row[0], 'i'), row[1]]; });
+		var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+		var node;
+		while ((node = walker.nextNode())) {
+			var parent = node.parentNode && node.parentNode.nodeName;
+			if (parent === 'SCRIPT' || parent === 'STYLE' || parent === 'TEXTAREA') { continue; }
+			var changed = translate(node.nodeValue, texts, patterns);
+			if (changed !== node.nodeValue) { node.nodeValue = changed; }
+		}
+		root.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(function (field) {
+			var changed = translate(field.getAttribute('placeholder'), texts, patterns);
+			if (changed !== field.getAttribute('placeholder')) { field.setAttribute('placeholder', changed); }
+		});
+	}
+	var queued = false;
+	function later() {
+		if (queued) { return; }
+		queued = true;
+		setTimeout(function () { queued = false; run(document.body); }, 120);
+	}
+	function start() {
+		run(document.body);
+		// only a changed text is written, and a write waits for the next round: the observer never feeds on itself
+		new MutationObserver(later).observe(document.body, {childList: true, subtree: true});
+	}
+	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', start); } else { start(); }
+})();
+</script>
+<!-- site-analytics:start -->
+<script>
+(function () {
+  if (!new RegExp("^/(ru/|en/)?docs(/|$)").test(location.pathname)) return;
+  var title = document.querySelector('meta[name="title"]');
+  if (title && ["404", "Error"].indexOf(title.getAttribute('content')) >= 0) return;
+  var tag = document.createElement('script'); tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent("G-LFTPPSS6DZ");
+  document.head.appendChild(tag);
+  var ID = "G-LFTPPSS6DZ", KEY = "site_analytics_consent", TEXT = JSON.parse("{\"uk\": {\"message\": \"\\u041c\\u0438 \\u0432\\u0438\\u043a\\u043e\\u0440\\u0438\\u0441\\u0442\\u043e\\u0432\\u0443\\u0454\\u043c\\u043e Google Analytics, \\u0449\\u043e\\u0431 \\u0440\\u0430\\u0445\\u0443\\u0432\\u0430\\u0442\\u0438 \\u0432\\u0456\\u0434\\u0432\\u0456\\u0434\\u0443\\u0432\\u0430\\u043d\\u043d\\u044f \\u0441\\u0442\\u043e\\u0440\\u0456\\u043d\\u043e\\u043a. \\u0412\\u0456\\u043d \\u0432\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u044e\\u0454 cookie. \\u0412\\u0438 \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u0432\\u0456\\u0434\\u043c\\u043e\\u0432\\u0438\\u0442\\u0438\\u0441\\u044c.\", \"accept\": \"\\u041e\\u043a\", \"decline\": \"\\u0412\\u0456\\u0434\\u043c\\u043e\\u0432\\u0438\\u0442\\u0438\\u0441\\u044c\", \"label\": \"Cookie \\u0442\\u0430 \\u0430\\u043d\\u0430\\u043b\\u0456\\u0442\\u0438\\u043a\\u0430\"}, \"en\": {\"message\": \"We use Google Analytics to count visits to our pages. It sets cookies. You can opt out.\", \"accept\": \"OK\", \"decline\": \"Opt out\", \"label\": \"Cookies and analytics\"}, \"ru\": {\"message\": \"\\u041c\\u044b \\u0438\\u0441\\u043f\\u043e\\u043b\\u044c\\u0437\\u0443\\u0435\\u043c Google Analytics, \\u0447\\u0442\\u043e\\u0431\\u044b \\u0441\\u0447\\u0438\\u0442\\u0430\\u0442\\u044c \\u043f\\u043e\\u0441\\u0435\\u0449\\u0435\\u043d\\u0438\\u044f \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446. \\u041e\\u043d \\u0443\\u0441\\u0442\\u0430\\u043d\\u0430\\u0432\\u043b\\u0438\\u0432\\u0430\\u0435\\u0442 cookie. \\u0412\\u044b \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043e\\u0442\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c\\u0441\\u044f.\", \"accept\": \"\\u041e\\u043a\", \"decline\": \"\\u041e\\u0442\\u043a\\u0430\\u0437\\u0430\\u0442\\u044c\\u0441\\u044f\", \"label\": \"Cookie \\u0438 \\u0430\\u043d\\u0430\\u043b\\u0438\\u0442\\u0438\\u043a\\u0430\"}}");
+  var memory = null, configured = false;
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  function stored() {
+    try { var v = localStorage.getItem(KEY); if (v) return v; } catch (e) {}
+    var m = new RegExp('(?:^|;\\s*)' + KEY + '=([^;]*)').exec(document.cookie || '');
+    return m ? m[1] : memory;
+  }
+  function store(value) {
+    memory = value;
+    try { localStorage.setItem(KEY, value); return; } catch (e) {}
+    document.cookie = KEY + '=' + value + '; max-age=31536000; path=/; SameSite=Lax; Secure';
+  }
+  function configure() {
+    if (configured) return;
+    configured = true; gtag('js', new Date()); gtag('config', ID, {page_location: location.origin + location.pathname, page_referrer: (document.referrer || '').split(/[?#]/)[0]});
+  }
+  function clearCookies() {
+    var names = ['_ga', '_ga_' + ID.slice(2)], parts = location.hostname.split('.'), gone = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    names.forEach(function (n) {
+      document.cookie = n + gone;
+      for (var i = 0; i < parts.length - 1; i++) {
+        var d = parts.slice(i).join('.');
+        document.cookie = n + gone + '; domain=' + d; document.cookie = n + gone + '; domain=.' + d;
+      }
+    });
+  }
+  function grant() { gtag('consent', 'update', {analytics_storage: 'granted'}); configure(); }
+  function deny() { gtag('consent', 'update', {analytics_storage: 'denied'}); clearCookies(); }
+  function banner() {
+    var old = document.getElementById('site-analytics-banner'); if (old) old.remove();
+    var code = (document.documentElement.lang || 'en').slice(0, 2);
+    var t = TEXT[code === 'uk' || code === 'ru' ? code : 'en'];
+    var bar = document.createElement('div'); bar.id = 'site-analytics-banner';
+    bar.setAttribute('role', 'dialog'); bar.setAttribute('aria-label', t.label);
+    bar.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;background:#111827;color:#fff;padding:14px 16px;border-radius:10px;font:14px/1.45 system-ui,sans-serif;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;box-shadow:0 8px 24px rgba(0,0,0,.25)';
+    var p = document.createElement('span'); p.textContent = t.message; p.style.flex = '1 1 280px';
+    function button(label, primary, value) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = label;
+      b.style.cssText = 'cursor:pointer;border-radius:8px;padding:8px 14px;font:inherit;border:1px solid #fff;' + (primary ? 'background:#fff;color:#111827' : 'background:transparent;color:#fff');
+      b.onclick = function () {
+        store(value); bar.remove();
+        if (value === 'granted') grant(); else deny();
+      };
+      return b;
+    }
+    bar.append(p, button(t.decline, false, 'denied'), button(t.accept, true, 'granted'));
+    document.body.appendChild(bar);
+  }
+  function whenReady(fn) { if (document.body) fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  var choice = stored();
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: choice === 'denied' ? 'denied' : 'granted'});
+  if (choice === 'denied') clearCookies(); else configure();
+  if (!choice) whenReady(banner);
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href$="#cookies"]') : null;
+    if (a) { e.preventDefault(); banner(); }
+  });
+  window.addEventListener('hashchange', function () { if (location.hash === '#cookies') banner(); });
+  if (location.hash === '#cookies') whenReady(banner);
+})();
+</script>
+<!-- site-analytics:end --><link type="text/css" rel="stylesheet" href="/files/website_theme/fossdoc_13ddb3f7.css">
+<link type="text/css" rel="stylesheet" href="/assets/erpnext/dist/css/erpnext-web.bundle.CM72QE5D.css">
+<link type="text/css" rel="stylesheet" href="/assets/webshop/dist/css/webshop-web.bundle.UIGBTMSN.css">
+
+<link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/wiki.bundle.6E6VMVKH.css">
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/contributions.bundle.P6RUA62T.css">
+
+<link type="text/css" rel="stylesheet" href="/assets/wiki/dist/css/wiki.bundle.6E6VMVKH.css">
+
+
+	<script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function (fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = 0;
+		window.socketio_port = 9000;
+		window.show_language_picker = false;
+	</script>
+</head>
+
+<body frappe-session-status="logged-out"
+	data-path="docs/howto-change-localization"
+	class="">
+	<script>
+		const isUserPreferenceDarkMode = localStorage.getItem("darkMode");
+		const isSystemPreferenceDarkMode = window.matchMedia?.(
+			"(prefers-color-scheme: dark)"
+		)?.matches;
+		const darkModeState = isUserPreferenceDarkMode
+			? isUserPreferenceDarkMode == "true"
+			: isSystemPreferenceDarkMode;
+		if (darkModeState) {
+			document.body.classList.add("dark");
+		}
+	</script>
+	<!-- fixture: SVG sprites cut -->
+
+<nav class="wiki-navbar navbar navbar-light navbar-expand-lg sticky-top pr-4">
+  <div class="navbar-brand-container">
+    <a class="navbar-brand" alt="Go to home page" data-prefix=""
+      href="/docs"><img alt="Logo" data-alt-src="/files/fossdoc-favicon.svg" src='/files/fossdoc-favicon.svg'></a>
+    
+  </div>
+<!-- fixture: navbar items, sidebar and content cut -->
+</nav>
+<script>(function(){function f(){var b=document.querySelector('.navbar-brand-container');if(!b||b.querySelector('.fd-back'))return;var a=document.createElement('a');a.className='fd-back';var p=location.pathname,l=p.indexOf('/ru/')===0?'/ru':p.indexOf('/en/')===0?'/en':'/';a.href=l;a.textContent=l==='/en'?'← To the site':'← На сайт';a.style.cssText='margin-left:14px;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;color:inherit';b.style.display='flex';b.style.alignItems='center';b.appendChild(a);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();})();(function () {
+	var lang = location.pathname.indexOf('/ru/') === 0 ? 'ru' : location.pathname.indexOf('/en/') === 0 ? 'en' : 'uk';
+	var words = {
+		ru: {manual: 'Оглавление', manualTitle: 'Оглавление руководства', article: 'В этой статье', close: 'Закрыть'},
+		en: {manual: 'Contents', manualTitle: 'Contents of the manual', article: 'In this article', close: 'Close'},
+		uk: {manual: 'Зміст', manualTitle: 'Зміст посібника', article: 'У цій статті', close: 'Закрити'}
+	}[lang];
+	var css = '.fd-nav-bar,.fd-nav-btn,.fd-nav-head,.fd-nav-back{display:none}'
+		+ '.fd-nav-btn[hidden]{display:none!important}'
+		+ '.sidebar-item.active{background:rgba(217,56,30,.09);box-shadow:inset 3px 0 0 #d9381e}'
+		+ 'body.dark .sidebar-item.active{background:rgba(217,56,30,.16)}'
+		+ '.sidebar-item.active a{color:var(--text-color)!important;font-weight:600!important}'
+		+ '@media (max-width:1199.98px){'
+		+ 'html.fd-lock{overflow:hidden}'
+		+ '.fd-nav-bar{display:flex;gap:8px;position:sticky;top:0;z-index:900;padding:8px 0;margin-bottom:8px;'
+		+ 'background:var(--background-color,#fff);border-bottom:1px solid var(--border-color,#ddd)}'
+		+ '.fd-nav-bar.fd-empty{display:none}'
+		+ '.wiki-content [id]{scroll-margin-top:var(--fd-bar-offset,64px)}'
+		+ '.fd-nav-btn.fd-toc-btn{display:inline-flex;margin-left:auto}'
+		+ '.page-toc.fd-open{display:block!important;position:fixed;top:0;right:0;bottom:0;margin:0;height:auto;'
+		+ 'max-width:none;width:min(20rem,88vw);z-index:1060;padding:0 16px 40px;overflow-y:auto;scrollbar-width:thin;'
+		+ 'background:var(--background-color,#fff);box-shadow:-8px 0 24px rgba(0,0,0,.2)}'
+		+ '.page-toc.fd-open .page-toc-title{display:none}'
+		+ '.fd-nav-btn{align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border-color,#ccc);'
+		+ 'border-radius:999px;background:transparent;color:var(--text-color,#333);font-family:inherit;'
+		+ 'font-size:13px;font-weight:600;line-height:1;cursor:pointer}'
+		+ '.fd-nav-btn[aria-expanded=true]{background:#d9381e;border-color:#d9381e;color:#fff}'
+		+ '.fd-nav-btn svg{flex:none}'
+		+ '.fd-open>.fd-nav-head{display:flex;position:sticky;top:0;z-index:1;align-items:center;'
+		+ 'justify-content:space-between;gap:12px;width:auto;border-left:0;padding:14px 4px 10px;margin-bottom:8px;'
+		+ 'border-bottom:1px solid var(--border-color,#ddd);background:inherit;font-weight:700;font-size:15px;'
+		+ 'color:var(--text-color,#333)}'
+		+ '.fd-nav-head button{border:0;background:none;font-size:24px;line-height:1;padding:0 4px;color:inherit;'
+		+ 'cursor:pointer}'
+		+ '.fd-nav-back.fd-on{display:block;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1055;'
+		+ 'background:rgba(0,0,0,.4)}'
+		+ '}'
+		+ '@media (max-width:991.98px){'
+		+ '.fd-nav-btn.fd-manual-btn{display:inline-flex}'
+		+ '.sidebar-column.fd-open{display:block!important;position:fixed;top:0;left:0;bottom:0;margin:0;z-index:1060;'
+		+ 'width:min(20rem,88vw);overflow-y:auto;background:var(--sidebar-bg-color,#fff);'
+		+ 'box-shadow:8px 0 24px rgba(0,0,0,.2)}'
+		+ '.sidebar-column.fd-open .doc-sidebar{height:auto;padding-top:0}'
+		+ '.sidebar-column.fd-open .web-sidebar{width:100%;height:auto;overflow:visible}'
+		+ '.wiki-navbar .navbar-toggler,.wiki-navbar .sm-sidebar{display:none!important}'
+		+ '.wiki-navbar .navbar-collapse.wiki-navbar-container{display:flex!important;flex-basis:auto;flex-grow:0;'
+		+ 'flex-shrink:0;padding-right:0}'
+		+ '.wiki-navbar{flex-wrap:nowrap}'
+		+ '.wiki-navbar .navbar-brand-container{width:auto;max-width:none;min-width:0;overflow:hidden;flex:0 1 auto}'
+		+ '.wiki-navbar .navbar-brand{flex:none}'
+		+ '.wiki-navbar .fd-back{min-width:0;overflow:hidden;text-overflow:ellipsis}'
+		+ '.wiki-navbar .mobile-search-icon{flex-shrink:0}'
+		+ '.wiki-navbar .wiki-navbar-container .navbar-nav{width:auto;max-width:none;height:auto;border-left:0;'
+		+ 'flex-direction:row;align-items:center;padding:0 8px!important}'
+		+ '}';
+	var icons = {
+		manual: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+			+ 'stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>',
+		toc: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+			+ 'stroke-linecap="round"><path d="M5 6h14M9 12h10M9 18h10"/><circle cx="4.5" cy="12" r=".6"/>'
+			+ '<circle cx="4.5" cy="18" r=".6"/></svg>'
+	};
+
+	// scrollTopFor:begin
+	function scrollTopFor(box, item, scrollTop, head) {
+		if (!box.height || !item.height) {
+			return null;
+		}
+		var top = box.top + head;
+		if (item.top >= top && item.bottom <= box.bottom) {
+			return null;
+		}
+		return Math.max(0, Math.round(scrollTop + (item.top - top) - (box.bottom - top - item.height) / 2));
+	}
+	// scrollTopFor:end
+
+	// The open article is centred in the manual when it is out of view. Only the scroll box of the manual moves, never
+	// the page: the column itself in the phone panel, the inner box on a desktop. A hidden item has no height.
+	function revealActive(panel) {
+		try {
+			var column = document.querySelector('.sidebar-column');
+			var item = column && column.querySelector('.sidebar-item.active');
+			var box = panel ? column : column && column.querySelector('.web-sidebar');
+			if (!item || !box) {
+				return;
+			}
+			var head = panel ? column.querySelector('.fd-nav-head') : null;
+			var next = scrollTopFor(
+				box.getBoundingClientRect(), item.getBoundingClientRect(), box.scrollTop, head ? head.offsetHeight : 0
+			);
+			if (next !== null) {
+				box.scrollTop = next;
+			}
+		} catch (error) {
+			/* the reader scrolls by hand */
+		}
+	}
+
+	function init() {
+		var manual = document.querySelector('.sidebar-column');
+		var toc = document.querySelector('.page-toc');
+		if (document.querySelector('.fd-nav-back') || !(manual || toc)) {
+			return;
+		}
+		var style = document.createElement('style');
+		style.textContent = css;
+		document.head.appendChild(style);
+		var back = document.createElement('div');
+		back.className = 'fd-nav-back';
+		document.body.appendChild(back);
+		// the strip lives in the article column (a stretched flex item): the left column, which is built around a
+		// sticky navbar, is not touched
+		var bar = document.createElement('div');
+		bar.className = 'fd-nav-bar';
+		var host = document.querySelector('.main-column');
+		var wikiNav = document.querySelector('.wiki-navbar');
+		if (host) {
+			host.insertBefore(bar, host.firstChild);
+		} else if (wikiNav && wikiNav.parentNode) {
+			wikiNav.parentNode.insertBefore(bar, wikiNav.nextSibling);
+		} else {
+			document.body.insertBefore(bar, document.body.firstChild);
+		}
+		var buttons = [];
+		var open = null;
+		var tocButton = null;
+
+		function close() {
+			var was = open;
+			open = null;
+			back.classList.remove('fd-on');
+			document.documentElement.classList.remove('fd-lock');
+			if (was) {
+				was.panel.classList.remove('fd-open');
+				was.panel.removeAttribute('role');
+				was.panel.removeAttribute('aria-modal');
+				was.button.setAttribute('aria-expanded', 'false');
+				if (!was.button.hidden) {
+					was.button.focus();
+				}
+			}
+		}
+		function attach(panel, kind, title, label) {
+			if (!panel) {
+				return null;
+			}
+			panel.id = panel.id || 'fd-panel-' + kind;
+			var head = document.createElement('div');
+			head.className = 'fd-nav-head';
+			head.innerHTML = '<span></span><button type="button" aria-label="' + words.close + '">&times;</button>';
+			head.firstChild.textContent = title;
+			head.lastChild.addEventListener('click', close);
+			panel.insertBefore(head, panel.firstChild);
+			var button = document.createElement('button');
+			button.type = 'button';
+			button.className = 'fd-nav-btn fd-' + kind + '-btn';
+			button.setAttribute('aria-expanded', 'false');
+			button.setAttribute('aria-controls', panel.id);
+			button.innerHTML = icons[kind] + '<span></span>';
+			button.lastChild.textContent = label;
+			button.addEventListener('click', function () {
+				var was = open && open.panel === panel;
+				close();
+				if (was || button.hidden) {
+					return;
+				}
+				panel.classList.add('fd-open');
+				panel.setAttribute('role', 'dialog');
+				panel.setAttribute('aria-label', title);
+				panel.setAttribute('aria-modal', 'true');
+				button.setAttribute('aria-expanded', 'true');
+				back.classList.add('fd-on');
+				document.documentElement.classList.add('fd-lock');
+				open = {panel: panel, button: button};
+				head.lastChild.focus({preventScroll: true});
+				if (kind === 'manual') {
+					revealActive(true);
+				}
+			});
+			// the links of the contents scroll without a history call; a page of the manual is closed by the history wrapper
+			panel.addEventListener('click', function (event) {
+				var link = event.target.closest ? event.target.closest('a') : null;
+				if (link && open && open.panel === panel) {
+					close();
+				}
+			});
+			if (kind === 'manual') {
+				// the Wiki navigates on touchstart of a link and cancels the scroll of the panel: stop that event
+				// before it reaches the link (the click that follows a tap still navigates)
+				panel.addEventListener('touchstart', function (event) {
+					var link = event.target.closest ? event.target.closest('a') : null;
+					if (link && open && open.panel === panel) {
+						event.stopPropagation();
+					}
+				}, {capture: true, passive: true});
+			}
+			buttons.push(button);
+			bar.appendChild(button);
+			return button;
+		}
+		function updateBar() {
+			var visible = buttons.some(function (button) {
+				return !button.hidden && window.getComputedStyle(button).display !== 'none';
+			});
+			bar.classList.toggle('fd-empty', !visible);
+			var sticky = wikiNav && window.getComputedStyle(wikiNav).position === 'sticky';
+			var navHeight = sticky ? wikiNav.offsetHeight : 0;
+			bar.style.top = navHeight + 'px';
+			// measured only after fd-empty is applied: an empty or hidden strip counts as 0
+			var barHeight = window.getComputedStyle(bar).display !== 'none' ? bar.offsetHeight : 0;
+			document.documentElement.style.setProperty('--fd-bar-offset', (navHeight + barHeight + 8) + 'px');
+		}
+		function refreshToc() {
+			if (!tocButton) {
+				return;
+			}
+			var shown = !!toc.querySelector('a') && !toc.classList.contains('hide');
+			tocButton.hidden = !shown;
+			if (!shown && open && open.panel === toc) {
+				close();
+			}
+			updateBar();
+		}
+		function watch(query, panel) {
+			if (!panel || !window.matchMedia) {
+				return;
+			}
+			var list = window.matchMedia(query);
+			var changed = function (event) {
+				if (!event.matches && open && open.panel === panel) {
+					close();
+				}
+				updateBar();
+			};
+			if (list.addEventListener) {
+				list.addEventListener('change', changed);
+			} else if (list.addListener) {
+				list.addListener(changed);
+			}
+		}
+
+		attach(manual, 'manual', words.manualTitle, words.manual);
+		tocButton = attach(toc, 'toc', words.article, words.article);
+		refreshToc();
+		updateBar();
+		window.addEventListener('resize', updateBar);
+		if (window.ResizeObserver) {
+			var sizes = new ResizeObserver(updateBar);
+			sizes.observe(bar);
+			if (wikiNav) {
+				sizes.observe(wikiNav);
+			}
+		}
+		if (toc && window.MutationObserver) {
+			// the Wiki swaps the contents on navigation and toggles hide in the edit mode; scrolling toggles
+			// classes on the links, which the second observation (no subtree) does not see
+			var observer = new MutationObserver(refreshToc);
+			observer.observe(toc, {childList: true, subtree: true});
+			observer.observe(toc, {attributes: true, attributeFilter: ['class']});
+		}
+		// the Wiki scrolls the manual itself 50 ms after the page is ready; this runs after it and acts only if the item
+		// is still out of view
+		setTimeout(function () {
+			revealActive(false);
+		}, 300);
+		watch('(max-width:991.98px)', manual);
+		watch('(max-width:1199.98px)', toc);
+		// the Wiki loads a page of the manual by ajax after history.pushState (a phone sends no click: the Wiki cancels
+		// touchstart), so every navigation closes the panel; an error of close() must never break the Wiki
+		['pushState', 'replaceState'].forEach(function (name) {
+			var original = window.history[name];
+			if (typeof original !== 'function') {
+				return;
+			}
+			window.history[name] = function () {
+				try {
+					close();
+				} catch (error) {
+					/* the navigation goes on */
+				}
+				return original.apply(this, arguments);
+			};
+		});
+		window.addEventListener('popstate', close);
+		window.addEventListener('pageshow', function (event) {
+			if (event.persisted) {
+				close();
+			}
+		});
+		back.addEventListener('click', close);
+		document.addEventListener('keydown', function (event) {
+			if (!open) {
+				return;
+			}
+			if (event.key === 'Escape') {
+				close();
+				return;
+			}
+			if (event.key !== 'Tab') {
+				return;
+			}
+			var items = Array.prototype.filter.call(open.panel.querySelectorAll('a[href],button'), function (item) {
+				return item.offsetParent !== null;
+			});
+			if (!items.length) {
+				return;
+			}
+			var first = items[0];
+			var last = items[items.length - 1];
+			if (!open.panel.contains(document.activeElement)
+				|| (event.shiftKey && document.activeElement === first)
+				|| (!event.shiftKey && document.activeElement === last)) {
+				(event.shiftKey ? last : first).focus();
+				event.preventDefault();
+			}
+		});
+	}
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+})();
+(function () {
+	var SPACES = {"docs":"uk","ru/docs":"ru","en/docs":"en"}, PAIRS = {"abbyy-integration":["uk","ru"],"access-rights-levels":["uk","ru"],"accounts-number":["uk","ru"],"add-file-link":["uk","ru"],"administrator-documentation":["uk","ru"],"administrator-extended-documentation":["uk","ru"],"administrator-manual":["uk","ru"],"advanced-rout-settings":["uk","ru"],"approval-with-departments-heads":["uk","ru"],"archive":["uk","ru"],"arm":["uk","ru"],"assistant-work":["uk","ru"],"attached-files":["uk","ru"],"audit":["uk","ru"],"automatic-transfer-documents-to-subfolders":["uk","ru"],"bitis-manual":["uk","ru"],"calcfields":["uk","ru"],"choosing-database":["uk","ru"],"civils-work":["uk","ru"],"client-documentation":["uk","ru"],"common-card-settings":["uk","ru"],"configuring-webclient-on-iis-server":["uk","ru"],"connect-server-settings":["uk","ru"],"control":["uk","ru"],"control-dep-work":["uk","ru"],"control-routing":["uk","ru"],"create-document-type":["uk","ru"],"db-transfer-wizard":["uk","ru"],"departments-manual":["uk","ru"],"doc-journal":["uk","ru"],"docrouts":["uk","ru"],"docs-execution-status":["uk","ru"],"docs-numbers":["uk","ru"],"docs-overview":["uk","ru","en"],"doctypes":["uk","ru"],"document-chat":["uk","ru"],"document-files-blocking":["uk","ru"],"document-mark":["uk","ru"],"document-registration":["uk","ru"],"documentlibrary":["uk","ru"],"documents-libraries":["uk","ru"],"dokumentooborot-dlja-biznesa":["uk","ru"],"domain":["uk","ru"],"ecp":["uk","ru"],"edit-date-index":["uk","ru"],"email-server-settings":["uk","ru"],"external-modules":["uk","ru"],"file-size-restrictions":["uk","ru"],"folders-tree":["uk","ru"],"fossbap":["uk","ru"],"fossdoc-implementation":["uk","ru"],"fossdoc-internet":["uk","ru"],"fossdoc-twolan":["uk","ru"],"fossdoc-work":["uk","ru"],"fossmail":["uk","ru"],"gettingstarted":["uk","ru"],"gettingstarted-2":["uk","ru"],"gettingstarted-3":["uk","ru"],"gettingstarted-4":["uk","ru"],"gettingstarted-5":["uk","ru"],"gettingstarted-6":["uk","ru"],"gettingstarted-7":["uk","ru"],"gettingstarted-8":["uk","ru"],"golden-gate-testimonial":["uk","ru"],"history":["uk","ru"],"how-to-create-email-account":["uk","ru"],"how-to-set-access-rights":["uk","ru"],"howto-admincustomize-views-of-folders-and-documents":["uk","ru"],"howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-document":["uk","ru"],"howto-admincustomize-views-of-folders-and-documents-admincustomization-of-the-type-of-folder":["uk","ru"],"howto-change-localization":["uk","ru","en"],"howto-class-schedule":["uk","ru"],"howto-client-configuration":["uk","ru"],"howto-collaboration-folders":["uk","ru"],"howto-create-a-document-type":["uk","ru","en"],"howto-create-a-document-type-create-a-document-library":["uk","ru"],"howto-create-a-document-type-create-a-document-type":["uk","ru"],"howto-create-a-document-type-deleting-doctypes-and-libraries":["uk","ru"],"howto-create-a-document-type-manage-folders-to-store-documents":["uk","ru"],"howto-create-a-document-type-working-with-documents":["uk","ru"],"howto-create-a-template-for-printing":["uk","ru","en"],"howto-create-a-template-for-printing-template-preparation":["uk","ru","en"],"howto-create-a-template-for-printing-template-print":["uk","ru","en"],"howto-create-business-application":["uk","ru","en"],"howto-create-business-application-configuring-access-to-a-folder":["uk","ru","en"],"howto-create-business-application-creating-a-basic-document-type":["uk","ru","en"],"howto-create-business-application-document-fields":["uk","ru","en"],"howto-create-business-application-document-functions":["uk","ru","en"],"howto-create-business-application-preparation-of-the-route":["uk","ru","en"],"howto-create-business-application-test-the-solution":["uk","ru","en"],"howto-create-business-application-use-of-the-mechanism-of-inherited-types":["uk","ru","en"],"howto-create-email-account":["uk","ru","en"],"howto-create-structure-organization":["uk","ru","en"],"howto-create-structure-organization-tree-brances":["uk","ru"],"howto-create-structure-organization-user-management":["uk","ru"],"howto-customize-views-of-folders-and-documents-customization-of-the-type-of-folder":["uk","ru"],"howto-customize-views-of-folders-and-documents-view-filter":["uk","ru"],"howto-customize-views-of-folders-and-documents-virtual-folder":["uk","ru"],"howto-delegation-of-powers":["uk","ru","en"],"howto-doc-copy":["uk","ru"],"howto-document":["uk","ru","en"],"howto-document-library":["uk","ru"],"howto-document-templates":["uk","ru","en"],"howto-document-type":["uk","ru"],"howto-documents-assembling":["uk","ru"],"howto-documents-search":["uk","ru"],"howto-email-server-settings":["uk","ru","en"],"howto-enabled-disabled-delete-routes":["uk","ru","en"],"howto-export-import":["uk","ru","en"],"howto-fast-insertion-of-text":["uk","ru"],"howto-fdmp-backup":["ru","en"],"howto-field-types":["uk","ru","en"],"howto-field-types-complex":["uk","ru"],"howto-fields-calculated-value":["uk","ru"],"howto-fields-default-value":["uk","ru","en"],"howto-history-and-statistics-of-the-document":["uk","ru"],"howto-history-and-statistics-of-the-document-enabling-of-the-statistics-and-history":["uk","ru"],"howto-history-and-statistics-of-the-document-review-of-the-statistics-and-history":["uk","ru"],"howto-history-and-statistics-of-the-document-starting-the-statistics":["uk","ru"],"howto-hr-automation":["uk","ru"],"howto-import-files":["uk","ru"],"howto-information-system-implementation":["uk","ru"],"howto-inner-accounts":["uk","ru"],"howto-link-copy":["uk","ru"],"howto-microsoft-office-documents-merging-vs-temlates-fosslook":["uk","ru"],"howto-mysql-backup":["ru","en"],"howto-mysql-fosslook":["uk","ru","en"],"howto-period-of-execution-of-orders":["uk","ru","en"],"howto-periodic-tasks":["uk","ru","en"],"howto-provide-access-to-folders-and-documents-delegation-of-authority-by-the-administrator":["uk","ru","en"],"howto-provide-access-to-folders-and-documents-provide-access-to-folders-and-documents":["uk","ru","en"],"howto-publication-of-documents":["uk","ru"],"howto-related-documents":["uk","ru","en"],"howto-related-documents-auto":["uk","ru"],"howto-related-documents-manual":["uk","ru"],"howto-restrict-access-to-individual-documents":["uk","ru","en"],"howto-search-the-entire-database":["uk","ru"],"howto-setting-eds":["uk","ru"],"howto-setting-the-order-of-folders":["uk","ru"],"howto-share-documents-orders-co-workers":["uk","ru"],"howto-share-documents-orders-subdivision":["uk","ru","en"],"howto-share-documents-route-control-points":["uk","ru","en"],"howto-ssl-server-settings":["uk","ru"],"howto-staff-departments":["uk","ru"],"howto-standard-document":["uk","ru"],"howto-struktura":["uk","ru"],"howto-use-fosslook":["uk","ru"],"howto-users-csv-import":["uk","ru"],"howto-work-with-directories":["uk","ru"],"howtoinstall":["uk","ru"],"iit-client-manual":["uk","ru"],"iit-manual":["uk","ru"],"install-overview":["uk","ru"],"installtroubleshooting":["uk","ru"],"integrations-overview":["uk","ru"],"internetmail":["uk","ru"],"journal":["uk","ru"],"klassifikacija-informacionnyh-sistem":["uk","ru"],"last-login-time":["uk","ru"],"library-counterparty":["uk","ru"],"library-edms":["uk","ru"],"library-edms-digitalsign":["uk","ru"],"library-edms-import-ad":["uk","ru"],"library-edms-nomenklature":["uk","ru"],"library-edms-projects":["uk","ru"],"library-edms-projects-to-registration":["uk","ru"],"library-edms-qrcodes":["uk","ru"],"library-edms-registration":["uk","ru"],"library-edms-tasks":["uk","ru"],"library-mail":["uk","ru"],"library-server":["uk","ru"],"library-workflows":["uk","ru"],"library-workflows-acting-users":["uk","ru"],"library-workflows-delete-by-group":["uk","ru"],"library-workflows-display-options":["uk","ru"],"library-workflows-fill-task-content":["uk","ru"],"library-workflows-manual-tasks-processing":["uk","ru"],"library-workflows-notifs":["uk","ru"],"library-workflows-personal-templates-policy":["uk","ru"],"library-workflows-stop-on-negative":["uk","ru"],"library-workflows-task-coloring":["uk","ru"],"library-workflows-template-tools":["uk","ru"],"library-workflows-term-reminders":["uk","ru"],"library-workflows-visibility":["uk","ru"],"license-upgrade":["uk","ru"],"links":["uk","ru"],"memorandum":["uk","ru"],"mobileid":["uk","ru"],"modhistory":["uk","ru"],"modules":["uk","ru"],"obuchenie-sed":["uk","ru"],"order-types":["uk","ru"],"orgstructure":["uk","ru"],"password-policy":["uk","ru"],"perepiska-sed":["uk","ru"],"podkluchenie-sed":["uk","ru"],"podpis-documenta-sed":["uk","ru"],"portal-setup":["uk","ru"],"preparation-of-the-route":["uk","ru"],"print-resolution":["uk","ru"],"project-wizard":["uk","ru"],"project-work":["uk","ru"],"ptah":["uk","ru"],"qrcode":["uk","ru"],"reference-dictionaries":["uk","ru"],"regnum-reserv":["uk","ru"],"reminder":["uk","ru"],"reminder-email":["uk","ru"],"report-work":["uk","ru"],"resolution-work":["uk","ru"],"route-template-points":["uk","ru"],"routing-notifier":["uk","ru"],"server-tasks":["uk","ru"],"server-upgrade":["uk","ru"],"sev":["uk","ru"],"sev-npa":["uk","ru"],"sev-settings":["uk","ru"],"shared-contacts":["uk","ru"],"show-vice-performers":["uk","ru"],"sql-economy":["uk","ru"],"statistic":["uk","ru"],"storage":["uk","ru"],"svjazannye-dokumenty":["uk","ru"],"system-settings":["uk","ru"],"tendencii-razvitija-sed":["uk","ru"],"test-the-route":["uk","ru"],"testimonial1":["uk","ru"],"testimonial2":["uk","ru"],"testimonial3":["uk","ru"],"two-factor-auth":["uk","ru"],"user-management":["uk","ru"],"user-manual":["uk","ru"],"user-templates":["uk","ru"],"users-groups":["uk","ru"],"vchasno":["uk","ru"],"vhod-ishod":["uk","ru"],"vhodyashiye":["uk","ru"],"vybor-sed":["uk","ru"],"web-server":["uk","ru"],"web-server-settings":["uk","ru"],"webportal":["uk","ru"],"workflows-dictionary":["uk","ru"]};
+	function apply() {
+		var match = /^\/((?:ru\/|en\/)?docs)(?:\/([^\/]+))?\/?$/.exec(location.pathname);
+		if (!match || !SPACES[match[1]]) {
+			return;
+		}
+		document.documentElement.lang = SPACES[match[1]];
+		Array.prototype.forEach.call(document.querySelectorAll('link[data-fd-hreflang]'), function (link) {
+			link.remove();
+		});
+		var languages = match[2] && PAIRS[match[2]];
+		if (!languages) {
+			return;
+		}
+		var spaces = {};
+		Object.keys(SPACES).forEach(function (space) {
+			spaces[SPACES[space]] = space;
+		});
+		var add = function (code, language) {
+			var link = document.createElement('link');
+			link.rel = 'alternate';
+			link.hreflang = code;
+			link.href = location.origin + '/' + spaces[language] + '/' + match[2];
+			link.setAttribute('data-fd-hreflang', '');
+			document.head.appendChild(link);
+		};
+		languages.forEach(function (language) {
+			add(language, language);
+		});
+		add('x-default', languages.indexOf('uk') >= 0 ? 'uk' : languages[0]);
+	}
+	apply();
+	['pushState', 'replaceState'].forEach(function (name) {
+		var original = window.history[name];
+		if (typeof original !== 'function') {
+			return;
+		}
+		window.history[name] = function () {
+			var result = original.apply(this, arguments);
+			try {
+				apply();
+			} catch (error) {
+				/* the navigation goes on */
+			}
+			return result;
+		};
+	});
+	window.addEventListener('popstate', apply);
+})();
+</script>
+</body>
+</html>
+<!-- fixture: cut by scripts/cut_fixture.py from https://www.fossdoc.com/docs/howto-change-localization as served on 2026-11-09 (Wiki 2372f859f6) -->
