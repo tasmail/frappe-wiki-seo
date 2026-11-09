@@ -22,13 +22,16 @@ itself.
 
 One hook, `after_request` (`wiki_seo.hook.after_request`). Frappe calls it for every request after the response is made,
 also for a page that came from the page cache or the HTML cache of the Wiki, so a cached page is fixed too and switching the
-hook on or off needs no cache clear. The whole hook is wrapped in `try/except`: an error is logged
-(`frappe.logger("wiki_seo")`) and the response stays exactly as it was. All changes are computed first and applied at the
-end: the headers, then one `response.set_data()`.
+hook on or off needs no cache clear. The hook never raises. The header rules run first and on their own; the body rules
+run after them in their own `try/except`, so a failure there (the route map, a rule) leaves the body as it was and never
+costs the header. A failing route map (no Wiki, a database or cache error) is not asked again for 60 s. Errors are logged
+to `frappe.logger("wiki_seo")` at most once a minute per kind and process. The new body is computed in full first and set
+with one `response.set_data()`.
 
 **Guards**, in this order; each leaves the response untouched:
 
-1. no `wiki_seo` key, or `enabled: false` (the kill switch);
+1. no `wiki_seo` key, or `enabled` not explicitly on (the kill switch: only `true`, `1`, `"on"`, `"true"`, `"yes"`
+   enable it; an absent, `null`, empty or any other value is off);
 2. no response (Frappe passes `None` after an `HTTPException` such as `NotFound`);
 3. a host that is not in `hosts` (lower case, the port dropped);
 4. a method other than `GET` or `HEAD`;
@@ -60,7 +63,12 @@ A missing element skips its rule only. A rewritten page carries `X-Wiki-Seo: 1`.
 **Route map.** `{route: (space, slug)}` and the first page of each sidebar, made by two `frappe.get_all` queries (the
 sidebars of the Wiki Spaces, the published Wiki Pages) and kept in `frappe.cache` under `wiki_seo:routes` for 600 s. The
 `doc_events` of Wiki Page (`on_update`, `on_trash`, `after_rename`) and Wiki Space (`on_update`, `on_trash`) delete the
-key. A change that fires no document event (SQL, a patch) shows after at most 600 s.
+key. The route map is asked only for a path under a configured space (the case ignored). Limits, all bounded by the
+600 s TTL: a change that fires no document event (SQL, a patch, a method that writes with `frappe.db.set_value`, such as
+`update_page_settings` of the Wiki, which changes the route and `hide_on_sidebar` of a page) is not seen until the key expires; the key is dropped before
+the transaction commits, so a request between the event and the commit can store the old map again for up to 600 s.
+Slugs in the URLs that the hook writes are percent-quoted; two spaces of one language give one link of that language (the
+first space of the config that publishes the slug).
 
 ## Configuration
 
@@ -69,7 +77,7 @@ field takes the default; unknown fields are ignored.
 
 | Field | Meaning | Default |
 | --- | --- | --- |
-| `enabled` | `false` (or `0`, `"off"`) turns the hook off: the kill switch | on |
+| `enabled` | `true` (or `1`, `"on"`, `"true"`, `"yes"`) turns the hook on; anything else is the kill switch | off |
 | `hosts` | the host names the hook acts on; any other host of the site is left alone | none (the hook does nothing) |
 | `base_url` | the canonical origin of the `hreflang` links | `""` |
 | `spaces` | space route -> language, e.g. `{"docs": "uk", "ru/docs": "ru", "en/docs": "en"}`; the order is the order of the links | none (no body rule) |
@@ -99,9 +107,9 @@ Example:
 
 ## Cost
 
-A request that a guard or the header rules settle costs a config read and a few comparisons: no query and no Redis call.
-Any other `200` HTML page of a configured host costs one `frappe.cache` read (the route map); a Wiki page then a few regular
-expressions over the head and up to the logo anchor and one `set_data` (`tests/test_performance.py` bounds a 600 KB page
+Every request costs a config read and a few comparisons; the header rules (also on `/login` and on error pages) read no
+body, run no query and make no Redis call. A `200` HTML page under a configured space costs one `frappe.cache` read (the
+route map; two queries when it is rebuilt, at most once per 600 s); a Wiki page then a few regular expressions over the head and up to the logo anchor and one `set_data` (`tests/test_performance.py` bounds a 600 KB page
 at 50 ms, best of 20 runs, generous on purpose for a loaded CI runner).
 
 ## Removing it
