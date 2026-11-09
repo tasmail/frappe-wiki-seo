@@ -101,8 +101,8 @@ Example:
 
 A request that a guard or the header rules settle costs a config read and a few comparisons: no query and no Redis call.
 Any other `200` HTML page of a configured host costs one `frappe.cache` read (the route map); a Wiki page then a few regular
-expressions over the head and up to the logo anchor and one `set_data` (`tests/test_performance.py` pins a 600 KB page
-under 5 ms).
+expressions over the head and up to the logo anchor and one `set_data` (`tests/test_performance.py` bounds a 600 KB page
+at 50 ms, best of 20 runs, generous on purpose for a loaded CI runner).
 
 ## Removing it
 

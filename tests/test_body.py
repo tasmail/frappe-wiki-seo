@@ -90,7 +90,7 @@ def test_the_rewrite_is_idempotent(fossdoc):
 def test_the_page_without_a_space_logo_points_the_logo_to_the_first_page(frappe_stub):
 	frappe_stub.local.conf["wiki_seo"] = {
 		**FOSSDOC,
-		"hosts": ["erp.foss.ua", "www.erp.foss.ua", "erpfoss.erp-crm.org"],
+		"hosts": ["erp.foss.ua", "www.erp.foss.ua", "erp-internal.wiki.example.org"],
 		"base_url": "https://erp.foss.ua",
 		"title_suffix": " | ERP FOSS",
 		"site_name": "ERP FOSS",
@@ -182,9 +182,9 @@ def test_a_query_string_of_a_reader_does_not_stop_the_rewrite(fossdoc):
 
 
 def test_a_space_outside_the_config_is_not_rewritten(fossdoc):
-	fossdoc.wiki.add_space("doc", ["capsula-page"])
+	fossdoc.wiki.add_space("doc", ["other-page"])
 	body = fixture("fossdoc_uk.html")
-	assert rewrite(body, "/doc/capsula-page").get_data() == body
+	assert rewrite(body, "/doc/other-page").get_data() == body
 
 
 def test_no_spaces_in_the_config_means_no_body_rule_and_no_query(fossdoc):

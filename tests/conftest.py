@@ -99,7 +99,7 @@ def _make_frappe():
 FRAPPE = _make_frappe()
 
 FOSSDOC = {
-	"hosts": ["www.fossdoc.com", "fossdoc.com", "fossdocprod.erp-crm.org"],
+	"hosts": ["www.fossdoc.com", "fossdoc.com", "prod-internal.wiki.example.org"],
 	"base_url": "https://www.fossdoc.com",
 	"spaces": {"docs": "uk", "ru/docs": "ru", "en/docs": "en"},
 	"x_default": "uk",

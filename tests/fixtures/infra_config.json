@@ -1,14 +1,14 @@
 {
- "source": "tasmail/erpnext-infra branch wiki-seo-hook-infra 7bbe411: wanted(site, mode)['wiki_seo'] of press/wiki_seo_site.py for every site of SITES and every mode",
+ "source": "The objects printed by press/wiki_seo_site.py of tasmail/erpnext-infra (wanted(site, mode)['wiki_seo'] for every site of SITES and every mode), with the QA and internal host names replaced by example names; the infra repository tests the real hosts.",
  "sites": {
-  "fossdocqa.erp-crm.org": {
+  "qa-internal.wiki.example.org": {
    "on": {
     "enabled": true,
     "hosts": [
-     "site-qa.fossdoc.com",
-     "fossdocqa.erp-crm.org"
+     "qa.wiki.example.org",
+     "qa-internal.wiki.example.org"
     ],
-    "base_url": "https://site-qa.fossdoc.com",
+    "base_url": "https://qa.wiki.example.org",
     "spaces": {
      "docs": "uk",
      "ru/docs": "ru",
@@ -47,10 +47,10 @@
    "off": {
     "enabled": false,
     "hosts": [
-     "site-qa.fossdoc.com",
-     "fossdocqa.erp-crm.org"
+     "qa.wiki.example.org",
+     "qa-internal.wiki.example.org"
     ],
-    "base_url": "https://site-qa.fossdoc.com",
+    "base_url": "https://qa.wiki.example.org",
     "spaces": {
      "docs": "uk",
      "ru/docs": "ru",
@@ -87,13 +87,13 @@
     "noindex_errors": true
    }
   },
-  "fossdocprod.erp-crm.org": {
+  "prod-internal.wiki.example.org": {
    "on": {
     "enabled": true,
     "hosts": [
      "www.fossdoc.com",
      "fossdoc.com",
-     "fossdocprod.erp-crm.org"
+     "prod-internal.wiki.example.org"
     ],
     "base_url": "https://www.fossdoc.com",
     "spaces": {
@@ -136,7 +136,7 @@
     "hosts": [
      "www.fossdoc.com",
      "fossdoc.com",
-     "fossdocprod.erp-crm.org"
+     "prod-internal.wiki.example.org"
     ],
     "base_url": "https://www.fossdoc.com",
     "spaces": {
@@ -175,13 +175,13 @@
     "noindex_errors": true
    }
   },
-  "erpfoss.erp-crm.org": {
+  "erp-internal.wiki.example.org": {
    "on": {
     "enabled": true,
     "hosts": [
      "erp.foss.ua",
      "www.erp.foss.ua",
-     "erpfoss.erp-crm.org"
+     "erp-internal.wiki.example.org"
     ],
     "base_url": "https://erp.foss.ua",
     "spaces": {
@@ -207,7 +207,7 @@
     "hosts": [
      "erp.foss.ua",
      "www.erp.foss.ua",
-     "erpfoss.erp-crm.org"
+     "erp-internal.wiki.example.org"
     ],
     "base_url": "https://erp.foss.ua",
     "spaces": {

@@ -55,7 +55,7 @@ def test_no_request_at_all_is_a_no_op(fossdoc):
 	assert snapshot(response) == before
 
 
-@pytest.mark.parametrize("host", ["capsula.erp-crm.org", "site-qa.fossdoc.com", "evil.example"])
+@pytest.mark.parametrize("host", ["shop.example.org", "qa.wiki.example.org", "evil.example"])
 def test_a_host_outside_the_config_is_left_alone(fossdoc, host):
 	before, after = run(html_response(fixture("fossdoc_uk.html")), host=host)
 	assert before == after

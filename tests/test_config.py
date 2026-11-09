@@ -7,7 +7,8 @@ from conftest import FIXTURES, fixture, html_response, make_request
 
 from wiki_seo import hook
 
-# The exact objects that press/wiki_seo_site.py of tasmail/erpnext-infra writes (see "source" in the file).
+# The objects that press/wiki_seo_site.py of tasmail/erpnext-infra prints, with example names in place of the QA and
+# internal hosts (see "source" in the file); tests/test_wiki_seo_site.py of that repository tests the real hosts.
 CONTRACT = json.loads((FIXTURES / "infra_config.json").read_text(encoding="utf-8"))["sites"]
 
 
@@ -68,8 +69,22 @@ def test_an_off_value_is_the_kill_switch(frappe_stub, enabled):
 
 
 def test_the_contract_covers_the_three_sites_and_both_modes():
-	assert set(CONTRACT) == {"fossdocqa.erp-crm.org", "fossdocprod.erp-crm.org", "erpfoss.erp-crm.org"}
+	"""The key set and the value shapes of the object of press/wiki_seo_site.py; its own repository has the matching test
+	with the real hosts, so a change of either side shows in one of them."""
+	assert len(CONTRACT) == 3
 	for modes in CONTRACT.values():
+		assert set(modes) == {"on", "off"}
+		raw = modes["on"]
+		assert (
+			isinstance(raw["hosts"], list) and raw["hosts"] and all(isinstance(h, str) for h in raw["hosts"])
+		)
+		assert raw["base_url"].startswith("https://") and not raw["base_url"].endswith("/")
+		assert raw["spaces"] == {"docs": "uk", "ru/docs": "ru", "en/docs": "en"} and raw["x_default"] == "uk"
+		assert (
+			raw["title_suffix"].startswith(" | ") and isinstance(raw["site_name"], str) and raw["site_name"]
+		)
+		assert raw["noindex_paths"] and all("/" not in path for path in raw["noindex_paths"])
+		assert raw["noindex_errors"] is True
 		assert modes["on"]["enabled"] is True and modes["off"]["enabled"] is False
 		assert {key: value for key, value in modes["on"].items() if key != "enabled"} == {
 			key: value for key, value in modes["off"].items() if key != "enabled"
